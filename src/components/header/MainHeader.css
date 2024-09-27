@@ -48,7 +48,7 @@
   border: none;
   background: none;
   overflow: hidden;
-  color: var(--grayscale-gray700, #c1bbb7);
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
   text-overflow: ellipsis;
   font-size: var(--Text-Body, 16px);
   font-family: Pretendard;
@@ -56,6 +56,12 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: var(--grayscale-gray700, #c1bbb7); /* Placeholder: 회색 */
+  opacity: 1; /* 불투명하게 설정 */
 }
 
 .header-icons {
