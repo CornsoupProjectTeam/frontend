@@ -1,0 +1,53 @@
+.explore-projects-page {
+  padding: 20px;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.project-info h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.view-details {
+  background-color: #fd8b3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  border: 1px solid #ddd;
+  background-color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #fd8b3e;
+  color: white;
+}

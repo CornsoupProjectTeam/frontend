@@ -4,7 +4,7 @@ import React from "react";
 import "./MainHeader.css";
 
 /* assets */
-import newLogo from "../../assets/images/logo.svg";
+import newLogo from "../../assets/images/logo_black.svg";
 import MagnifyingGlass from "../../assets/icons/MainHeader_MagnifyingGlass.svg";
 import Menu from "../../assets/icons/MainHeader_Menu.svg";
 import Chat from "../../assets/icons/MainHeader_Chat.svg";
