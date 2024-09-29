@@ -1,53 +1,97 @@
-.explore-projects-page {
+/* src/pages/Project/ExploreProject.css */
+
+/* 기본 페이지 스타일 */
+.explore-project-page {
+  font-family: "Pretendard", sans-serif;
   padding: 20px;
 }
 
-.projects-list {
+/* 페이지 헤더 */
+.page-header {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.project-card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.project-info h2 {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.view-details {
-  background-color: #fd8b3e;
+.register-project-button {
+  background-color: #ff6600;
   color: white;
-  border: none;
   padding: 10px 20px;
-  border-radius: 4px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.filter-bar {
+.register-project-button:hover {
+  background-color: #e65a00;
+}
+
+/* 메인 컨텐츠 (사이드바 + 프로젝트 리스트) */
+.main-content {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.pagination {
+/* 사이드바 스타일 */
+.sidebar {
+  width: 250px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li span {
+  font-weight: bold;
+  color: #ff6600;
+}
+
+/* 필터 바와 정렬 드롭다운 */
+.filter-bar-wrapper {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.pagination button {
-  border: 1px solid #ddd;
-  background-color: white;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-.pagination .active {
-  background-color: #fd8b3e;
+.filter-toggle-button {
+  background-color: #ff6600;
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-toggle-button:hover {
+  background-color: #e65a00;
+}
+
+.sort-dropdown {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 프로젝트 리스트 */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }

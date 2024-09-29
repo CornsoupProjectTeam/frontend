@@ -1,14 +1,13 @@
 /* src/components/footer/Footer.css */
 
+/* 공통 스타일 */
 .footer {
   display: flex;
-  padding: var(--Icon-Large, 40px);
+  padding: 40px;
   justify-content: flex-end;
   align-items: flex-start;
   gap: 63px;
-  flex-shrink: 0;
-  padding: var(--Icon-Large, 40px);
-  background: var(--maincolor-black, #131115);
+  background: #131115;
 }
 
 .footer-container {
@@ -18,65 +17,50 @@
   justify-content: flex-end;
   align-items: flex-start;
   gap: 63px;
-  flex-shrink: 0;
 }
 
 .footer-container h4 {
-  color: var(--orange-400, #fd8b3e);
-
-  /* headline/small */
+  color: #fd8b3e;
   font-family: Pretendard;
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 32px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
-.footer-container li {
-  color: var(--orange-700, #b76632);
-  list-style-type: none;
-  padding: 10px;
-  padding-left: 0;
-
-  /* title/medium/Large */
-  font-family: Pretendard;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
+/* ul과 li 공통 스타일 */
 .footer-container ul {
   padding-left: 0;
   margin: 0;
 }
 
-.footer-service {
-  display: flex;
-  width: 240px;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-shrink: 0;
+.footer-container li {
+  list-style-type: none;
+  margin: 10px 0;
 }
 
-.footer-page {
-  display: flex;
-  width: 240px;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-shrink: 0;
-  align-self: stretch;
+/* a 링크 스타일 */
+.footer-container li a {
+  text-decoration: none;
+  color: #b76632;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  transition: color 0.3s ease;
 }
 
+/* 링크에 대한 hover 효과 */
+.footer-container li a:hover {
+  color: #fd8b3e; /* 링크 호버 시 색상 변경 */
+}
+
+/* 푸터 구조 */
+.footer-service,
+.footer-page,
 .footer-cs {
-  display: flex;
   width: 240px;
   flex-direction: column;
   align-items: flex-start;
-  flex-shrink: 0;
-  align-self: stretch;
 }
 
 .footer-logo {

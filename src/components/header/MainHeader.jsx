@@ -1,5 +1,6 @@
 // src/components/header/MainHeader.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./MainHeader.css";
 
@@ -16,14 +17,20 @@ const MainHeader = () => {
   return (
     <header className="main-header">
       <div className="logo">
-        <img src={newLogo} alt="Logo" />
+        {/* 로고 클릭 시 /main으로 이동 */}
+        <Link to="/main">
+          <img src={newLogo} alt="Logo" />
+        </Link>
       </div>
       <div className="header-search">
         <div className="language-selector">
           <LanguageSelector />
         </div>
         <div className="search-bar">
-          <img src={MagnifyingGlass} alt="Search" className="search-icon" />
+          {/* 검색 아이콘 클릭 시 동작 추가 */}
+          <a href="/search">
+            <img src={MagnifyingGlass} alt="Search" className="search-icon" />
+          </a>
           <input
             type="text"
             placeholder="검색하세요"
