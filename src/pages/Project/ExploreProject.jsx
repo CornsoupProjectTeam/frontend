@@ -1,8 +1,8 @@
-// src/pages/Project/ExploreProjectPage.jsx
+// src/pages/Project/ExploreProject.jsx
 
 import React from "react";
 
-import "./ExploreProjectPage.css";
+import "./ExploreProject.css";
 
 import ProjectCard from "../../components/ProjectCard";
 import FilterBar from "../../components/FilterBar";

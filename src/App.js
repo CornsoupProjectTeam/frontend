@@ -2,7 +2,7 @@
 
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ExploreProjectPage from "./pages/Project/ExploreProjectPage";
+import ExploreProjectPage from "./pages/Project/ExploreProject";
 import MainHeader from "./components/header/MainHeader";
 import Footer from "./components/footer/Footer";
 
