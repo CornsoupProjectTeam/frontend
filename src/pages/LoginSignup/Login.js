@@ -3,7 +3,7 @@ import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode'; // named import로 변경
 import './Login.css'; 
 import logo_blackSVG from '../../assets/images/logo_black.svg'; // 경로에 맞게 조정하세요
-import LoginLogo_orangeSVG from '../../assets/images/LoginLogo_orange.svg';
+import login_orangeSVG from '../../assets/images/login_orange.svg';
 
 
 function LoginSignup() {
@@ -24,8 +24,8 @@ function LoginSignup() {
             디자이너를 이어주는
           </p>
           <img src={logo_blackSVG} alt="Itching Logo" className="logo-image" />
-          
-          <img src={LoginLogo_orangeSVG} alt="Gradient Logo" className="logo-svg" />
+          <img src={login_orangeSVG} alt="Gradient Logo" className="logo-svg" />
+
         </div>
   
         <div className="right-side">
