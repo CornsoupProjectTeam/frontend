@@ -1,0 +1,17 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define the gradient for the shapes -->
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FD8B3E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E9A353;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Circle -->
+  <circle cx="80" cy="100" r="40" fill="url(#orangeGradient)" />
+
+  <!-- Ellipse with a steeper rotation -->
+  <g transform="rotate(-43.06 250 100)">
+    <ellipse cx="250" cy="100" rx="100" ry="50" fill="orange" />
+  </g>
+</svg>
