@@ -36,21 +36,23 @@
 .logo-svg {
     width: 180px;
     margin-top: 20px;
+    background-color: transparent; /* 배경이 투명한지 확인 */
+    fill: none; /* fill 속성 제거 또는 필요에 따라 설정 */
 }
 
 /* 오른쪽 로그인 폼 */
 .right-side {
-    flex: 5;
+    flex: 1; /* 좌우 비율 조정 */
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: flex-start; /* 유효한 값으로 수정 */
     align-items: flex-start;
     background-color: #fff;
     padding: 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 400px;
-    margin: left; /* 로그인 폼을 중앙에 배치 */
+    margin-left: auto; /* 왼쪽 여백을 auto로 설정하여 중앙에서 오른쪽으로 배치 */
 }
 
 .heading {
