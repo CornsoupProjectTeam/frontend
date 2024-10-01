@@ -49,8 +49,8 @@
     align-items: flex-start;
     background-color: #fff;
     padding: 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     max-width: 400px;
     margin-left: auto; /* 왼쪽 여백을 auto로 설정하여 중앙에서 오른쪽으로 배치 */
 }
