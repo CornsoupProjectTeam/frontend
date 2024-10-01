@@ -4,7 +4,7 @@ import React from "react";
 import "./Footer.css";
 
 /* assets */
-import symbollogo from "../../assets/images/symbol_orange.svg";
+import symbollogo from "../../assets/images/Footer_Logo.svg";
 
 const Footer = () => {
   return (
