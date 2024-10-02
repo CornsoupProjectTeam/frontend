@@ -1,10 +1,6 @@
 import React from 'react';
 import './SignupEmail.css'; // 스타일을 별도 파일로 관리
-import React from "react";
-import { Button } from "../Button/Button";
-import { Textfield } from "../Textfield/Textfield";
-import { WebLogo } from "../WebLogo/WebLogo";
-import frame1000007095 from "./frame-1000007095.png";
+
 
 // 이메일 인증 완료 페이지 컴포넌트
 function SignupEmail() {
