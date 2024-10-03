@@ -1,6 +1,7 @@
 import React from 'react';
 import './SignupEmail.css'; // 스타일을 별도 파일로 관리
 
+
 // 이메일 인증 완료 페이지 컴포넌트
 function SignupEmail() {
   const handleResendEmail = () => {

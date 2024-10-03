@@ -1,11 +1,14 @@
 /* 전체 컨테이너 설정 */
 .login-container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     align-items: flex-start; /* 위쪽 정렬 */
     justify-content: flex-start; /* 왼쪽 정렬 */
-    background-color: #f7f7f7;
+    background-color: #fbfaf9;
     padding: 40px; /* 컨테이너 상단 및 좌측 여백 */
+    justify-content: space-between; /* 요소 간 공간을 유지 */
+    height: 960px; /* 페이지 높이 설정 */
+    width: 2000px; /* 페이지 너비 설정 */
 }
 
 /* 왼쪽 이미지와 텍스트를 세로로 정렬 */
@@ -15,7 +18,7 @@
     flex-direction: column; /* 수직 정렬 */
     justify-content: flex-start; /* 위쪽 정렬 */
     align-items: flex-start; /* 왼쪽 정렬 */
-    background-color: #f7f7f7;
+    background-color: #fbfaf9;
     padding-left: 50px; /* 왼쪽 여백 추가 */
     padding-top: 50px; /* 위쪽 여백 추가 */
 }
@@ -36,37 +39,47 @@
 .logo-svg {
     width: 180px;
     margin-top: 20px;
-    background-color: transparent; /* 배경이 투명한지 확인 */
-    fill: none; /* fill 속성 제거 또는 필요에 따라 설정 */
 }
 
 /* 오른쪽 로그인 폼 */
 .right-side {
-    flex: 1; /* 좌우 비율 조정 */
+    flex: 5;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* 유효한 값으로 수정 */
+    justify-content: left;
     align-items: flex-start;
     background-color: #fff;
     padding: 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 400px;
-    margin-left: auto; /* 왼쪽 여백을 auto로 설정하여 중앙에서 오른쪽으로 배치 */
+    margin: left; /* 로그인 폼을 중앙에 배치 */
+    position: relative; /* 위치 조정 */
+    top: 200px; /* 나에게 꼭 맞는 문구와 높이 맞춤 (값은 원하는 대로 조정 가능) */
+    position: absolute; /* 절대 위치 지정 */
+    left: 424px; /* 왼쪽으로부터 424px 떨어짐 */
+    right: 64px; /* 오른쪽으로부터 64px 떨어짐 */
+    max-width: calc(100% - 488px); /* 양쪽 여백을 고려한 최대 너비 설정 */
+    height: 600px; 
 }
 
-.heading {
+
+.login-heading {
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: left;
+    margin-top: 30px; 
 }
 
 .login-form {
     width: 100%;
     max-width: 300px;
+    margin-top: 30px; 
+    color: #ACA5A3;
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .input-group label {
@@ -83,28 +96,32 @@
 }
 
 .login-button {
-    width: 100%;
+    width: 107%;
     background-color: #333;
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
+    
 }
 
 .forgot-password, .signup-link {
     display: block;
-    margin-top: 15px;
     text-align: center;
-    color: #333;
+    color: #ACA5A3;
     text-decoration: none;
+    margin-top: 30px; 
+    text-decoration: underline; /* 밑줄 추가 */
 }
 
 .signup-link {
     color: orange;
     font-weight: bold;
+    text-decoration: underline; /* 밑줄 추가 */
 }
 
-.google-button {
-    margin-top: 10px;
+.google-button-wrapper {
+    margin-top: 40px; /* 구글 로그인 버튼 위의 여백 */
+    margin-bottom: 20px; /* 구글 로그인 버튼과 아래 요소 사이의 여백 */
 }

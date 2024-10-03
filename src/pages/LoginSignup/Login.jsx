@@ -24,11 +24,12 @@ function LoginSignup() {
             디자이너를 이어주는
           </p>
           <img src={logo_blackSVG} alt="Itching Logo" className="logo-image" />
+          
           <img src={login_orangeSVG} alt="Gradient Logo" className="logo-svg" />
-
         </div>
   
         <div className="right-side">
+          <h2 className="login-heading">로그인</h2> {/* New heading */}
           <form className="login-form">
             <div className="input-group">
               <label htmlFor="email">이메일</label>
@@ -43,7 +44,7 @@ function LoginSignup() {
   
           <a href="/" className="forgot-password">비밀번호를 잊었어요</a>
   
-          <div className="google-login">
+          <div className="google-button-wrapper">
             <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
           </div>
   
