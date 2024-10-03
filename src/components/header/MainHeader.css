@@ -1,4 +1,5 @@
 /* src/components/header/MainHeader.css */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 .main-header {
   display: flex;
@@ -40,7 +41,10 @@
   border-radius: 30px;
   background: var(--grayscale-gray100, #fbfaf9);
 }
-
+.search-bar button {
+  border: none;
+  background: none;
+}
 .search-bar input {
   display: flex;
   width: 100%;
@@ -51,7 +55,7 @@
   color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
   text-overflow: ellipsis;
   font-size: var(--Text-Body, 16px);
-  font-family: Pretendard;
+  font-family: "Pretendard";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -68,4 +72,62 @@
   display: flex;
   align-items: center;
   gap: var(--Space-400, 16px);
+}
+
+/* 반응형 메뉴 오버레이 스타일 */
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 999; /* 다른 요소 위로 나오도록 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.overlay-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overlay-logo {
+  width: 120px;
+}
+
+.close-icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+.overlay-menu-items {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overlay-menu-items ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.overlay-menu-items ul li {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.overlay-menu-items ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.overlay-footer {
+  text-align: center;
+  font-size: 18px;
+  margin-top: auto;
 }
