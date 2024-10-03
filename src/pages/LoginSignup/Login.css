@@ -8,7 +8,7 @@
     padding: 40px; /* 컨테이너 상단 및 좌측 여백 */
     justify-content: space-between; /* 요소 간 공간을 유지 */
     height: 960px; /* 페이지 높이 설정 */
-    width: 2000px; /* 페이지 너비 설정 */
+    width: 1610px; /* 페이지 너비 설정 */
 }
 
 /* 왼쪽 이미지와 텍스트를 세로로 정렬 */

@@ -42,7 +42,7 @@ function LoginSignup() {
             <button type="submit" className="login-button">로그인하기</button>
           </form>
   
-          <a href="/" className="forgot-password">비밀번호를 잊었어요</a>
+          <a href="/" className="forgot-password">아이디/비밀번호를 잊었어요</a>
   
           <div className="google-button-wrapper">
             <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
