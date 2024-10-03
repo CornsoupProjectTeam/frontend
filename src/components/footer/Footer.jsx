@@ -41,7 +41,7 @@ const Footer = () => {
               <a href="/freelancer">프리랜서 찾기</a>
             </li>
             <li>
-              <a href="/projects">프로젝트 찾기</a>
+              <a href="/explore-project">프로젝트 찾기</a>
             </li>
             <li>
               <a href="/client">클라이언트 찾기</a>
