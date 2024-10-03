@@ -6,6 +6,8 @@
 .explore-project-page {
   font-family: "Pretendard", sans-serif;
   padding: 60px;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 /* 페이지 헤더 */
@@ -64,38 +66,8 @@
 /* 필터 바와 정렬 드롭다운 미완성 시작 */
 .page-header-filter {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#Caret {
-  width: 13.5px;
-  height: 9px;
-}
-
-.filter-dropdown {
-  display: flex;
-  height: 42px;
-  padding: 14px var(--Space-300, 12px);
   align-items: center;
   gap: var(--Space-300, 12px);
-
-  border-radius: var(--Radius-200, 8px);
-  border: 1.5px solid var(--grayscale-gray400, #ede5e0);
-  background: var(--maincolor-white, #fff);
-}
-.filter-dropdown p {
-  color: var(--maincolor-black, #131115);
-  font-family: "Pretendard";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.filter-dropdown img {
-  width: 16px;
-  height: 21px;
 }
 
 .sort-dropdown {
@@ -153,7 +125,6 @@
   justify-content: center;
   align-items: flex-start;
   gap: 24px;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -166,6 +137,16 @@
   align-items: flex-start;
   gap: 55px;
   box-sizing: border-box;
+}
+
+.sidebar li {
+  cursor: pointer;
+}
+
+/* 선택된 항목을 주황색으로 변경 */
+.sidebar li.active {
+  color: var(--orange-400, #fd8b3e);
+  font-weight: bold;
 }
 
 .category {
@@ -208,10 +189,10 @@
 .project-lists {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* 줄 바꿈 가능 */
-  gap: 20px; /* 프로젝트 카드 사이의 간격 */
-  flex: 1 1 auto; /* 남은 공간을 차지하도록 설정 */
-  justify-content: flex-start; /* 카드가 왼쪽 정렬 */
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1 1 auto;
+  justify-content: flex-start;
   box-sizing: border-box;
-  overflow: hidden; /* 부모 컨테이너를 벗어나지 않도록 설정 */
+  overflow: visible;
 }

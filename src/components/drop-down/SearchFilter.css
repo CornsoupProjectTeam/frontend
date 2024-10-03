@@ -1,0 +1,115 @@
+/* src/components/drop-down/SearchFilter.css */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+/* 필터 바 전체 래퍼 */
+.filter-bar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* 필터 버튼 */
+.filter-dropdown {
+  display: flex;
+  height: 42px;
+  padding: 14px var(--Space-300, 12px);
+  align-items: center;
+  gap: var(--Space-300, 12px);
+
+  border-radius: var(--Radius-200, 8px);
+  border: 1.5px solid var(--grayscale-gray400, #ede5e0);
+  background: var(--maincolor-white, #fff);
+}
+
+.filter-dropdown p {
+  color: var(--maincolor-black, #131115);
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#Caret {
+  width: 12px;
+  height: 8px;
+}
+.filter-dropdown img {
+  width: 16px;
+  height: 21px;
+}
+
+.filter-dropdown-container {
+  display: flex;
+  padding: 18px 14px;
+  align-items: flex-start;
+  gap: 6px;
+  top: calc(100% + 8px); /* 버튼 아래로 8px 간격 */
+  position: absolute;
+
+  border-radius: 16px;
+  border: 1px solid var(--grayscale-gray200, #f4efec);
+  background: #fff;
+
+  /* 컨테이너 */
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.filter-column {
+  display: flex;
+  width: 216px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-100, 4px);
+}
+
+.filter-column h3 {
+  padding: 15px;
+  margin: 0;
+  color: var(--maincolor-black, #131115);
+
+  /* body/bold/Large */
+  font-family: "pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.filter-column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-column ul li {
+  padding: 15px;
+  color: var(--grayscale-gray800, #aca5a3);
+  cursor: pointer;
+
+  /* body/bold/Medium */
+  font-family: "Pretendard";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.badge-column {
+  cursor: pointer;
+  display: flex;
+  padding: 15px 14px;
+  align-items: center;
+  gap: var(--Space-100, 4px);
+
+  align-self: stretch;
+}
+.badge-column span {
+  color: var(--grayscale-gray800, #aca5a3);
+
+  /* body/bold/Medium */
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

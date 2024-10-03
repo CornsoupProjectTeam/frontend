@@ -1,9 +1,11 @@
 /* src/components/ProjectCard.css */
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
 .project-card {
   display: flex;
   width: 100%;
-  height: 469px;
+  height: auto;
   padding: var(--Icon-Large, 40px);
   flex-direction: column;
   align-items: flex-start;
@@ -12,46 +14,75 @@
   border-radius: 16px;
   border: var(--sds-size-stroke-border) solid var(--grayscale-gray200, #f4efec);
   background: var(--maincolor-white, #fff);
-  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+  /* 기존 box-shadow 개선 */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* 더 진한 쉐도우로 조정 */
 }
 
 .project-card-title {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .project-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-self: stretch;
 }
 
-.user-info {
+.user-img {
+  width: 85px;
+  height: 90px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-info-container {
   display: flex;
   align-items: center;
+  gap: var(--Space-200, 8px);
 }
-
-.user-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
+.user-info {
+  display: flex;
+  padding: var(--Space-200, 8px) var(--Space-300, 12px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
 }
 
 .user-details {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-300, 12px);
+}
+
+.user-work {
+  display: flex;
+  align-items: center;
+  gap: var(--Space-300, 12px);
 }
 
 .nickname {
-  font-size: 16px;
-  font-weight: bold;
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
+  margin: 0;
+  /* title/bold/Medium */
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .user-id {
-  font-size: 12px;
-  color: #888;
+  color: var(--grayscale-alpha-500, rgba(19, 17, 21, 0.5));
+  margin: 0;
+  /* body/medium/Medium */
+  font-family: "Pretendard";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .user-stats {
@@ -60,52 +91,81 @@
 
 .average-response-time,
 .match-count {
-  font-size: 14px;
-  color: #666;
-}
+  margin: 0;
 
-.project-card-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  color: var(--orange-600, #e67f3a);
+
+  /* body/medium/Medium */
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .project-card-tags {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
 }
 
-.project-card-tag {
-  background-color: #f1f1f1;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.project-card-badges {
+.project-card-buttons {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: var(--Space-200, 8px);
 }
 
-.freelancer-badge,
+.freelancer-badge img {
+  display: flex;
+  height: var(--Icon-Medium, 32px);
+  padding: 6px var(--Space-200, 8px);
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  padding: 0;
+}
+
 .pretest-score {
-  background-color: #ececec;
-  padding: 5px 10px;
-  border-radius: 5px;
+  display: flex;
+  height: 18px;
+  width: 86px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  border-radius: var(--Radius-100, 4px);
+  border: 1.34px solid var(--green-500, #52d47e);
+  background: var(--green-100, #ddf8e6);
+
+  color: var(--green-500, #52d47e);
+
+  /* body/bold/Small */
+  font-family: Pretendard;
   font-size: 12px;
-  color: #333;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .project-card-status {
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  text-align: center;
-  width: 100px;
+  display: flex;
+  height: 18px;
+  width: 60px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  border-radius: var(--Radius-100, 4px);
+  border: 1.34px solid var(--purple-500, #c97ccb);
+  background: var(--purple-100, #f6e6f6);
+
+  color: var(--purple-500, #c97ccb);
+
+  /* body/bold/Small */
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .status-open {
@@ -128,4 +188,22 @@
 
 .project-card-button:hover {
   background-color: #0056b3;
+}
+
+.project-image-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(307px, 1fr)
+  ); /* 반응형으로 이미지 배치 */
+  align-items: flex-start;
+  gap: var(--Space-400, 16px);
+  align-self: stretch;
+}
+
+.project-card-image {
+  width: 100%; /* 그리드 항목에 맞게 이미지를 꽉 채움 */
+  height: 230px;
+  object-fit: cover; /* 이미지 비율 유지 */
+  border-radius: 8px;
 }

@@ -7,23 +7,36 @@
   margin-top: 20px;
 }
 
-#pagination-btn {
+.pagination button {
   display: flex;
-  width: var(--Icon-Medium, 32px);
-  height: var(--Icon-Medium, 32px);
-  padding: 11px 0px 10px 0px;
+  width: 32px;
+  height: 32px;
   justify-content: center;
   align-items: center;
-
-  background-color: var(--white, #ffffff);
-  border-radius: var(--Radius-100, 4px);
-  border: var(--sds-size-stroke-border) solid var(--orange-400, #fd8b3e);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-button:disabled {
-  background-color: #cccccc;
+.pagination button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
 }
 
-span {
-  font-size: 16px;
+.pagination button.active {
+  color: #fd8b3e;
+  border: 2px solid #fd8b3e; /* 주황색 테두리 */
+  border-radius: 4px;
+}
+
+.pagination img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.pagination img[style*="not-allowed"] {
+  cursor: not-allowed;
 }
