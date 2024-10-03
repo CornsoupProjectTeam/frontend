@@ -2,6 +2,11 @@
 
 import React from "react";
 
+import "./Pagination.css";
+
+import LeftBtn from "../../src/assets/icons/GreyLeftBtn.svg";
+import RightBtn from "../../src/assets/icons/RightBtn.svg";
+
 const Pagination = ({ totalPages, currentPage }) => {
   const pages = [];
   for (let i = 1; i <= totalPages; i++) {
@@ -10,11 +15,16 @@ const Pagination = ({ totalPages, currentPage }) => {
 
   return (
     <div className="pagination">
+      <img src={LeftBtn} alt="left" />
       {pages.map((page) => (
-        <button key={page} className={page === currentPage ? "active" : ""}>
+        <button
+          id="pagination-btn"
+          ey={page}
+          className={page === currentPage ? "active" : ""}>
           {page}
         </button>
       ))}
+      <img src={RightBtn} alt="right" />
     </div>
   );
 };

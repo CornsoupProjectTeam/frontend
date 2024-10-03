@@ -7,14 +7,17 @@
   margin-top: 20px;
 }
 
-button {
-  background-color: #ff6600;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  margin: 0 10px;
-  cursor: pointer;
+#pagination-btn {
+  display: flex;
+  width: var(--Icon-Medium, 32px);
+  height: var(--Icon-Medium, 32px);
+  padding: 11px 0px 10px 0px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--white, #ffffff);
+  border-radius: var(--Radius-100, 4px);
+  border: var(--sds-size-stroke-border) solid var(--orange-400, #fd8b3e);
 }
 
 button:disabled {

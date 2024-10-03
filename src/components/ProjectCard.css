@@ -1,40 +1,131 @@
 /* src/components/ProjectCard.css */
 
 .project-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  font-family: "Pretendard", sans-serif;
+  display: flex;
+  width: 100%;
+  height: 469px;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-400, 16px);
+
+  border-radius: 16px;
+  border: var(--sds-size-stroke-border) solid var(--grayscale-gray200, #f4efec);
+  background: var(--maincolor-white, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
-.project-card h2 {
-  font-size: 18px;
+.project-card-title {
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.project-card p {
-  margin: 5px 0;
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.freelancer-info {
-  margin-top: 10px;
+.user-info {
   display: flex;
   align-items: center;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.nickname {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-id {
+  font-size: 12px;
+  color: #888;
+}
+
+.user-stats {
+  text-align: right;
+}
+
+.average-response-time,
+.match-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.project-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
-.badge {
-  background-color: gold;
-  color: white;
+.project-card-tag {
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.project-card-badges {
+  display: flex;
+  justify-content: space-between;
+}
+
+.freelancer-badge,
+.pretest-score {
+  background-color: #ececec;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
+  color: #333;
 }
 
-.weekend-options {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #666;
+.project-card-status {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+}
+
+.status-open {
+  background-color: #28a745; /* 초록색 */
+}
+
+.status-closed {
+  background-color: #dc3545; /* 빨간색 */
+}
+
+.project-card-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.project-card-button:hover {
+  background-color: #0056b3;
 }
