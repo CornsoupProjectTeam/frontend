@@ -1,6 +1,6 @@
 import React from "react";
 import { GoogleLogin } from "@react-oauth/google";
-import jwtDecode from "jwt-decode";
+import { jwtDecode } from 'jwt-decode';
 import "./Login.css";
 import logo_blackSVG from "../../assets/images/logo_black.svg"; // 경로에 맞게 조정하세요
 import login_orangeSVG from "../../assets/images/login_orange.svg";
@@ -30,11 +30,11 @@ function LoginSignup() {
       <div className="right-side">
         <h2 className="login-heading">로그인</h2> {/* New heading */}
         <form className="login-form">
-          <div className="input-group">
+          <div className="login-input-group">
             <label htmlFor="email">이메일</label>
             <input type="email" id="email" placeholder="이메일을 입력하세요." />
           </div>
-          <div className="input-group">
+          <div className="login-input-group">
             <label htmlFor="password">비밀번호</label>
             <input
               type="password"

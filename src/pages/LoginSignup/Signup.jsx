@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import './Signup.css'; // 필요하다면 별도의 스타일 파일 사용
+import { useNavigate } from 'react-router-dom'; // 페이지 이동을 위해 사용
+import './Signup.css';
+import logo_blackSVG from "../../assets/images/logo_black.svg"; // 경로에 맞게 조정하세요
+import login_orangeSVG from "../../assets/images/login_orange.svg";
+
 
 function Signup() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,11 +20,8 @@ function Signup() {
             return;
         }
 
-        // 이메일 전송 로직 (예시)
-        console.log(`이메일 인증 링크를 ${email}로 보냈습니다.`);
-
-        // 인증 성공 메시지
-        setMessage('인증 링크가 이메일로 전송되었습니다.');
+        // 이메일 검증 후 SignupEmail로 이동
+        navigate('/signupemail', { state: { email } });
     };
 
     return (
@@ -29,11 +31,12 @@ function Signup() {
                     나에게 꼭 맞는 <br />
                     디자이너를 이어주는
                 </p>
-                <img src="logo_black.svg" alt="Itching Logo" className="logo-image" />
-                <img src="gradient_logo.svg" alt="Gradient Logo" className="logo-svg" />
+                
+                <img src={logo_blackSVG} alt="Itching Logo" className="logo-image" />
+                <img src={login_orangeSVG} alt="Gradient Logo" className="logo-svg" />
             </div>
 
-            <div className="right-side">
+            <div className="right-side-signup">
                 <form className="signup-form" onSubmit={handleSubmit}>
                     <h2>회원가입</h2>
 
@@ -44,7 +47,7 @@ function Signup() {
                             id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder="웹멧을 입력하세요."
+                            placeholder="메일을 입력하세요."
                             required
                         />
                     </div>
@@ -53,8 +56,8 @@ function Signup() {
                         인증 링크 보내기
                     </button>
 
-                    {/* 이메일 전송 성공 또는 오류 메시지 */}
-                    {message && <p className="message">{message}</p>}
+                    {/* 오류 메시지 */}
+                    {message && <p className="error-message">{message}</p>}
                 </form>
             </div>
         </div>

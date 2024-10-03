@@ -1,0 +1,95 @@
+/* 전체 컨테이너 설정 */
+.signup-container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: #fbfaf9;
+    padding: 40px;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.logo-image {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.slogan {
+    font-size: 18px;
+    color: #6A6666;
+    margin-bottom: 20px;
+}
+
+
+.right-side-signup {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 361px;
+    margin-top: 70px;
+    position: absolute; /* 절대 위치 지정 */
+    left: 424px; /* 왼쪽으로부터 424px 떨어짐 */
+    right: 64px; /* 오른쪽으로부터 64px 떨어짐 */
+    max-width: calc(100% - 488px); /* 양쪽 여백을 고려한 최대 너비 설정 */
+
+}
+
+.signup-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    color: #6A6666;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 56px; 
+    
+}
+
+.input-group input {
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    height: 14px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    margin-top: 10px; 
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 90px; 
+    margin-left: 940px; /* 버튼을 오른쪽으로 밀기 위한 여백 */
+    align-self: flex-end; /* 버튼을 오른쪽 정렬 */
+}
+
+.error-message {
+    color: red;
+    margin-top: 20px;
+}

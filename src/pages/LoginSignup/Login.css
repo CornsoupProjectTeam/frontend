@@ -61,6 +61,7 @@
     right: 64px; /* 오른쪽으로부터 64px 떨어짐 */
     max-width: calc(100% - 488px); /* 양쪽 여백을 고려한 최대 너비 설정 */
     height: 600px; 
+    
 }
 
 
@@ -69,25 +70,26 @@
     margin-bottom: 20px;
     text-align: left;
     margin-top: 30px; 
+    color:#000000;
 }
 
 .login-form {
     width: 100%;
     max-width: 300px;
-    margin-top: 30px; 
     color: #ACA5A3;
+    margin-top: 56px;
 }
 
-.input-group {
+.login-input-group {
     margin-bottom: 30px;
 }
 
-.input-group label {
+.login-input-group label {
     display: block;
     margin-bottom: 5px;
 }
 
-.input-group input {
+.login-input-group input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -119,9 +121,9 @@
     color: orange;
     font-weight: bold;
     text-decoration: underline; /* 밑줄 추가 */
+    margin-top: 36px;
 }
 
 .google-button-wrapper {
-    margin-top: 40px; /* 구글 로그인 버튼 위의 여백 */
-    margin-bottom: 20px; /* 구글 로그인 버튼과 아래 요소 사이의 여백 */
+    margin-top: 56px; /* 구글 로그인 버튼 위의 여백 */
 }
