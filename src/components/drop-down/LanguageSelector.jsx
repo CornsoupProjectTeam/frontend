@@ -1,10 +1,11 @@
 // src/components/drop-down/LanguageSelector.jsx
+
 import React, { useState } from "react";
 import "./LanguageSelector.css";
 
 /* assets */
-import CaretDown from "../../assets/icons/LanguageSelector_CaretDown.svg";
-import CaretUp from "../../assets/icons/LanguageSelector_CaretUp.svg";
+import CaretDown from "../../assets/icons/CaretDown.svg";
+import CaretUp from "../../assets/icons/CaretUp.svg";
 import Globe from "../../assets/icons/MainHeader_Globe.svg";
 
 const LanguageSelector = () => {

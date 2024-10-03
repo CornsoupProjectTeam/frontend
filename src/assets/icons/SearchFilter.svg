@@ -1,0 +1,12 @@
+<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="FunnelSimple" clip-path="url(#clip0_1220_4984)">
+<path id="Vector" d="M4 11.6562H12" stroke="#131115" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M1.5 7.71875H14.5" stroke="#131115" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M6.5 15.5938H9.5" stroke="#131115" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1220_4984">
+<rect width="16" height="21" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg>
