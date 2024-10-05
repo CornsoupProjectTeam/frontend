@@ -70,8 +70,8 @@ const MainHeader = () => {
             placeholder="검색하세요"
             className="search-input"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onKeyDown={handleKeyDown}
+            // onChange={(e) => setSearchQuery(e.target.value)}
+            // onKeyDown={handleKeyDown}
           />
         </div>
         <div className="header-icons">

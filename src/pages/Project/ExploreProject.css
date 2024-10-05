@@ -2,7 +2,6 @@
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
-/* 기본 페이지 스타일 */
 .explore-project-page {
   font-family: "Pretendard", sans-serif;
   padding: 60px;
@@ -10,7 +9,6 @@
   margin: 0 auto;
 }
 
-/* 페이지 헤더 */
 .page-header {
   display: flex;
   padding: var(--Icon-Large, 40px);
@@ -43,6 +41,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--Space-200, 8px);
+  cursor: pointer;
 
   border-radius: 30px;
   border: none;
@@ -63,7 +62,11 @@
   background-color: #ff6600;
 }
 
-/* 필터 바와 정렬 드롭다운 미완성 시작 */
+.page-header-title a {
+  color: var(--maincolor-white, #fff);
+  text-decoration: none;
+}
+
 .page-header-filter {
   display: flex;
   align-items: center;
@@ -117,9 +120,7 @@
 .sort-options li:hover {
   background-color: #f1f1f1;
 }
-/* 필터 바와 정렬 드롭다운 미완성 끝 */
 
-/* 메인 컨텐츠 (사이드바 + 프로젝트 리스트) */
 .main-content {
   display: flex;
   justify-content: center;
@@ -128,7 +129,6 @@
   box-sizing: border-box;
 }
 
-/* 사이드바 스타일 */
 .sidebar {
   display: flex;
   width: 256px;
@@ -143,7 +143,6 @@
   cursor: pointer;
 }
 
-/* 선택된 항목을 주황색으로 변경 */
 .sidebar li.active {
   color: var(--orange-400, #fd8b3e);
   font-weight: bold;
@@ -183,8 +182,6 @@
   font-weight: 500;
   line-height: 28px; /* 155.556% */
 }
-
-/* 개별 프로젝트 카드 리스트 스타일 */
 
 .project-lists {
   display: flex;

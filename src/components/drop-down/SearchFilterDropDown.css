@@ -1,11 +1,14 @@
-/* src/components/drop-down/FilterDropDown.css */
+/* src/components/drop-down/SearchFilter.css */
+
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
+/* 필터 바 전체 래퍼 */
 .filter-bar-wrapper {
   position: relative;
   display: inline-block;
 }
 
+/* 필터 버튼 */
 .filter-dropdown {
   display: flex;
   height: 42px;
@@ -26,12 +29,10 @@
   font-weight: 500;
   line-height: normal;
 }
-
 #Caret {
   width: 12px;
   height: 8px;
 }
-
 .filter-dropdown img {
   width: 16px;
   height: 21px;
@@ -41,14 +42,15 @@
   display: flex;
   padding: 18px 14px;
   align-items: flex-start;
-  gap: 8px;
-  top: calc(100% + 8px);
+  gap: 6px;
+  top: calc(100% + 8px); /* 버튼 아래로 8px 간격 */
   position: absolute;
 
   border-radius: 16px;
   border: 1px solid var(--grayscale-gray200, #f4efec);
   background: #fff;
 
+  /* 컨테이너 */
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
@@ -91,11 +93,21 @@
   line-height: normal;
 }
 
-.filter-column ul li img {
-  margin-right: 8px;
-}
+.badge-column {
+  cursor: pointer;
+  display: flex;
+  padding: 15px 14px;
+  align-items: center;
+  gap: var(--Space-100, 4px);
 
-.filter-column ul li span {
+  align-self: stretch;
+}
+.badge-column span {
+  color: var(--grayscale-gray800, #aca5a3);
+
+  /* body/bold/Medium */
+  font-family: Pretendard;
   font-size: 14px;
-  color: #aca5a3;
+  font-style: normal;
+  line-height: normal;
 }

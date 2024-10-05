@@ -1,15 +1,16 @@
 /* src/components/drop-down/Sort.css */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 /* 전체 래퍼 */
 .sort-dropdown-wrapper {
   position: relative;
   display: inline-block;
-  height: 42px;
 }
 
-/* 정렬 버튼 */
 .sort-dropdown {
   display: flex;
+  height: 42px;
+  padding: 14px var(--Space-300, 12px);
   align-items: center;
   gap: var(--Space-300, 12px);
 
@@ -18,45 +19,70 @@
   background: var(--maincolor-white, #fff);
 }
 
+.selectSort {
+  color: var(--maincolor-black, #131115);
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 #Caret {
   width: 12px;
   height: 8px;
 }
 
-.sort-dropdown-button img {
-  width: 20px;
+.sort-dropdown img {
+  width: 16px;
   height: 21px;
 }
 
-/* 드롭다운 메뉴 */
+/* 드롭다운 아이콘
+.sort-dropdown .dropdown-icon {
+  margin-left: auto;
+}*/
+
 .sort-options {
-  top: calc(100% + 8px); /* 버튼 아래 8px */
   display: flex;
-  width: 95px;
-  padding: 20px var(--Space-300, 12px);
+  padding: 18px 14px;
+  gap: 8px;
+  top: calc(100% + 8px);
+  position: absolute;
+  top: calc(100% + 8px);
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: var(--Space-400, 16px);
+
   border-radius: 16px;
-  border: var(--sds-size-stroke-border) solid var(--grayscale-gray200, #f4efec);
+  border: 1px solid var(--grayscale-gray200, #f4efec);
   background: #fff;
 
-  /* 컨테이너 */
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+  z-index: 1000;
+  width: 100%;
+  min-width: 120px;
 }
 
+/* 드롭다운 리스트 아이템 */
 .sort-options li {
-  display: flex;
-  padding: 5px 7px;
-  align-items: center;
-  align-self: stretch;
+  padding: 10px;
   cursor: pointer;
   font-size: 14px;
-  color: #333;
-  text-align: left;
+  color: var(--grayscale-gray800, #aca5a3);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.2s ease;
 }
 
+/* Hover 스타일 */
 .sort-options li:hover {
-  background-color: #f1f1f1;
-  border-radius: 5px;
+  background-color: #f4efec;
+  border-radius: 4px;
+}
+
+/* 선택된 옵션 강조 */
+.sort-options li.selected {
+  font-weight: bold;
+  color: var(--maincolor-black, #131115);
 }
