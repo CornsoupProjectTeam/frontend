@@ -44,6 +44,7 @@
   gap: 8px;
   top: calc(100% + 8px);
   position: absolute;
+  flex-direction: column;
 
   border-radius: 16px;
   border: 1px solid var(--grayscale-gray200, #f4efec);
@@ -98,4 +99,34 @@
 .filter-column ul li span {
   font-size: 14px;
   color: #aca5a3;
+}
+
+.filter-column ul li.selected span {
+  font-weight: bold;
+  color: #fd8b3e;
+}
+
+/* 적용 버튼 추가로 인한 디자인 */
+.filter-apply-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0 0;
+}
+
+.filter-apply-button {
+  background-color: #fd8b3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.filter-column-wrapper {
+  display: flex;
+  gap: 6px;
 }
