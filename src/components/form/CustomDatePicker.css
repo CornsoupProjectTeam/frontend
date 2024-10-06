@@ -1,0 +1,50 @@
+/* src/components/form/CustomDatePicker.css */
+.custom-datepicker {
+  width: 100%; /* 부모 요소 너비에 맞게 설정 */
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+/* 커스텀 인풋 스타일 */
+.custom-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: "Pretendard";
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* 커스텀 달력 스타일 */
+.custom-calendar {
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Pretendard";
+  font-size: 14px;
+}
+
+.custom-calendar .react-datepicker__day--selected {
+  background-color: #f07a26;
+  color: #fff;
+}
+
+.custom-calendar .react-datepicker__day--selected:hover {
+  background-color: #e66900;
+  color: #fff;
+}
+
+.custom-calendar .react-datepicker__day:hover {
+  background-color: #f0a860;
+  color: #fff;
+}
+
+.react-datepicker__day--weekend {
+  color: #f07a26;
+}
+
+.react-datepicker__day--today {
+  font-weight: bold;
+  color: #f07a26;
+}

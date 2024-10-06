@@ -1,6 +1,7 @@
 // src/components/drop-down/Sort.jsx
 
 import React, { useState, useRef, useEffect } from "react";
+
 import "./Sort.css";
 
 /* assets */
@@ -8,7 +9,7 @@ import CaretUp from "../../assets/icons/CaretUp.svg";
 import CaretDown from "../../assets/icons/CaretDown.svg";
 import SortIcon from "../../assets/icons/SortDescendin.svg"; // 정렬 아이콘
 
-const SortDropdown = ({ sortCriteria, onSortChange }) => {
+const SortDropdown = ({ sortOptions, sortCriteria, onSortChange }) => {
   const [isSortOpen, setIsSortOpen] = useState(false);
   const sortRef = useRef(null);
 
@@ -40,18 +41,23 @@ const SortDropdown = ({ sortCriteria, onSortChange }) => {
   return (
     <div className="sort-dropdown-wrapper" ref={sortRef}>
       {/* 정렬 버튼 */}
-      <div className="sort-dropdown" onClick={toggleSortDropdown}>
+      <button className="sort-dropdown" onClick={toggleSortDropdown}>
         <img src={SortIcon} alt="정렬" />
         <span className="selectSort">{sortCriteria}</span>
         <img id="Caret" src={isSortOpen ? CaretUp : CaretDown} alt="Caret" />
-      </div>
+      </button>
 
       {/* 드롭다운 메뉴 */}
       {isSortOpen && (
         <ul className="sort-options">
-          <li onClick={() => handleSortChange("최신순")}>최신순</li>
-          <li onClick={() => handleSortChange("인기순")}>인기순</li>
-          <li onClick={() => handleSortChange("추천순")}>추천순</li>
+          {sortOptions.map((option, index) => (
+            <li
+              key={index}
+              className={sortCriteria === option ? "selected" : ""}
+              onClick={() => handleSortChange(option)}>
+              {option}
+            </li>
+          ))}
         </ul>
       )}
     </div>

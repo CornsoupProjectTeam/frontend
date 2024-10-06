@@ -38,13 +38,10 @@ const Footer = () => {
               <a href="/main">메인화면</a>
             </li>
             <li>
-              <a href="/freelancer">프리랜서 찾기</a>
+              <a href="/explore-freelancer">프리랜서 찾기</a>
             </li>
             <li>
-              <a href="/projects">프로젝트 찾기</a>
-            </li>
-            <li>
-              <a href="/client">클라이언트 찾기</a>
+              <a href="/explore-client">클라이언트 찾기</a>
             </li>
           </ul>
         </div>
@@ -52,10 +49,10 @@ const Footer = () => {
           <h4>고객센터</h4>
           <ul>
             <li>
-              <a href="/faq">자주 묻는 질문</a>
+              <a href="">자주 묻는 질문</a>
             </li>
             <li>
-              <a href="/contact">일대일 문의</a>
+              <a href="">일대일 문의</a>
             </li>
           </ul>
         </div>

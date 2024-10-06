@@ -1,10 +1,9 @@
-/* src/pages/Project/ExploreProject.css */
+/* /src/pages/Client/ExploreClient.css */
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
-.explore-project-page {
+.client-explore-page {
   font-family: "Pretendard", sans-serif;
-  padding: 60px;
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -16,7 +15,6 @@
   align-items: flex-start;
   gap: 36px;
 }
-
 .page-header-title {
   display: flex;
   padding: var(--Space-400, 16px) var(--Space-100, 4px) var(--Space-400, 16px)
@@ -27,44 +25,9 @@
 }
 
 .page-header-title h1 {
-  color: var(--blue-900, #1b1e33);
-  font-family: "Pretendard";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.register-project-button {
-  display: flex;
-  padding: 20px 36px;
-  justify-content: center;
-  align-items: center;
-  gap: var(--Space-200, 8px);
-  cursor: pointer;
-
-  border-radius: 30px;
-  border: none;
-  background: var(--orange-400, #fd8b3e);
-
-  color: var(--maincolor-white, #fff);
-  text-align: center;
-
-  /* body/bold/Large - prominent */
-  font-family: "Pretendard";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 160%;
-}
-
-.register-project-button:hover {
-  background-color: #ff6600;
-}
-
-.page-header-title a {
-  color: var(--maincolor-white, #fff);
-  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  color: #1b1e33;
 }
 
 .page-header-filter {
@@ -73,60 +36,13 @@
   gap: var(--Space-300, 12px);
 }
 
-.sort-dropdown {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  position: relative;
-}
-.sort-dropdown p {
-  color: var(--maincolor-black, #131115);
-  font-family: "Pretendard";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.sort-dropdown img {
-  width: 20px;
-  height: 21px;
-}
-
-.sort-dropdown .dropdown-icon {
-  margin-left: auto;
-}
-
-.sort-options {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  border: 1px solid #ddd;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.sort-options li {
-  padding: 8px 10px;
-  cursor: pointer;
-}
-
-.sort-options li:hover {
-  background-color: #f1f1f1;
-}
-
 .main-content {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 24px;
   box-sizing: border-box;
+  padding: 0;
 }
 
 .sidebar {
@@ -183,13 +99,21 @@
   line-height: 28px; /* 155.556% */
 }
 
-.project-lists {
+.client-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
   flex: 1 1 auto;
   justify-content: flex-start;
   box-sizing: border-box;
   overflow: visible;
+  display: flex;
+}
+
+.pagination-container {
+  margin: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

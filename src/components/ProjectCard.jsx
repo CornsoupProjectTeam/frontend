@@ -72,7 +72,9 @@ const ProjectCard = ({
             onClick={handleFavoriteToggle} // 클릭 이벤트 핸들러
             style={{ cursor: "pointer" }} // 클릭 가능한 버튼 스타일 추가
           />
-          <img src={detailBtn} alt="자세히 보기" />
+          <a href="/explore-project/details">
+            <img src={detailBtn} alt="자세히 보기" />
+          </a>
         </div>
       </div>
 

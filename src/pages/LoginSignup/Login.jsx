@@ -1,6 +1,6 @@
 import React from "react";
 import { GoogleLogin } from "@react-oauth/google";
-import jwtDecode from 'jwt-decode';
+import jwtDecode from "jwt-decode";
 import "./Login.css";
 import logo_blackSVG from "../../assets/images/logo_black.svg"; // 경로에 맞게 조정하세요
 import login_orangeSVG from "../../assets/images/login_orange.svg";

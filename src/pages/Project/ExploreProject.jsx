@@ -6,9 +6,10 @@ import "./ExploreProject.css";
 
 /* components */
 import ProjectCard from "../../components/ProjectCard";
-import SearchFilter from "../../components/drop-down/SearchFilter";
+import SearchFilter from "../../components/drop-down/SearchFilterDropDown";
 import Pagination from "../../components/Pagination";
 import Sort from "../../components/drop-down/Sort";
+import RegisterProject from "./RegisterProject";
 
 /* sample assets */
 import sampleProjectImg from "../../assets/images/image 36.png";
@@ -98,14 +99,7 @@ const ExploreProject = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(projectsData.length / ITEMS_PER_PAGE);
   const [selectedCategory, setSelectedCategory] = useState("");
-
-  const toggleFilterBar = () => {
-    setIsFilterOpen(!isFilterOpen);
-  };
-
-  const toggleSortDropdown = () => {
-    setIsSortOpen(!isSortOpen);
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSortChange = (option) => {
     setSortCriteria(option);
@@ -126,13 +120,21 @@ const ExploreProject = () => {
     setSelectedCategory(category);
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="explore-project-page">
       {/* 페이지 제목 및 등록 버튼 */}
       <div className="page-header">
         <div className="page-header-title">
           <h1>어떤 프로젝트를 찾으세요?</h1>
-          <button className="register-project-button">프로젝트 등록하기</button>
+          <RegisterProject />
         </div>
 
         {/* 필터 바 */}

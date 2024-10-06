@@ -1,20 +1,17 @@
-// src/components/drop-down/SearchFilter.jsx
+// src/components/drop-down/FilterDropdown.jsx
 
 import React, { useState, useEffect, useRef } from "react";
 
 import "./SearchFilter.css";
 
 /* assets */
-import SearchFilterIcon from "../../assets/icons/SearchFilter.svg";
-import CaretUp from "../../assets/icons/CaretUp.svg";
 import CaretDown from "../../assets/icons/CaretDown.svg";
-import goldWombat from "../../assets/icons/GoldWombat.svg";
-import silverWombat from "../../assets/icons/SilverWombat.svg";
-import bronzeWombat from "../../assets/icons/BronzeWombat.svg";
+import CaretUp from "../../assets/icons/CaretUp.svg";
+import FilterIcon from "../../assets/icons/SearchFilter.svg";
 
-const SearchFilter = () => {
-  // 드롭다운 열림 상태 관리
+const FilterDropdown = ({ title, filters, filterIcon, onApply }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [selectedOptions, setSelectedOptions] = useState([]);
   const filterRef = useRef(null);
 
   // 드롭다운 토글 함수
@@ -25,15 +22,32 @@ const SearchFilter = () => {
   // 외부 클릭 감지 핸들러
   const handleClickOutside = (event) => {
     if (filterRef.current && !filterRef.current.contains(event.target)) {
-      setIsFilterOpen(false); // 외부 클릭 시 드롭다운 닫기
+      setIsFilterOpen(false);
     }
   };
 
+  const handleOptionSelect = (optionLabel) => {
+    setSelectedOptions(
+      (prevSelected) =>
+        prevSelected.includes(optionLabel)
+          ? prevSelected.filter((option) => option !== optionLabel) // 이미 선택된 항목이면 제거
+          : [...prevSelected, optionLabel] // 선택되지 않은 항목이면 추가
+    );
+  };
+
+  // "적용" 버튼 클릭 시 선택한 옵션을 적용하고 드롭다운을 닫는 함수
+  const handleApplyClick = () => {
+    onApply(selectedOptions); // 부모 컴포넌트로 선택된 옵션 전달
+    setIsFilterOpen(false); // 드롭다운 닫기
+  };
+
+  const handleResetClick = () => {
+    setSelectedOptions([]); // 모든 선택 항목 해제
+  };
+
   useEffect(() => {
-    // 외부 클릭 이벤트 추가
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      // 이벤트 리스너 제거
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
@@ -42,52 +56,46 @@ const SearchFilter = () => {
     <div className="filter-bar-wrapper" ref={filterRef}>
       {/* 필터 버튼 */}
       <button className="filter-dropdown" onClick={toggleFilterBar}>
-        <img src={SearchFilterIcon} alt="검색 필터" />
-        <p>검색 필터</p>
+        {filterIcon && <img src={FilterIcon} alt={`${title} 아이콘`} />}
+        <p>{title}</p>
         <img id="Caret" src={isFilterOpen ? CaretUp : CaretDown} alt="Caret" />
       </button>
 
       {/* 드롭다운 메뉴 */}
       {isFilterOpen && (
         <div className="filter-dropdown-container">
-          {/* 가격대 섹션 */}
-          <div className="filter-column">
-            <h3>가격대</h3>
-            <ul>
-              <li>000,000원 이하</li>
-              <li>000,000원 이하</li>
-              <li>000,000원 이하</li>
-              <li>000,000원 이하</li>
-              <li>000,000원 이하</li>
-            </ul>
+          <div className="filter-column-wrapper">
+            {filters.map((section, idx) => (
+              <div className="filter-column" key={idx}>
+                <h3>{section.label}</h3>
+                <ul>
+                  {section.options.map((option, i) => (
+                    <li
+                      key={i}
+                      className={
+                        selectedOptions.includes(option.label) ? "selected" : ""
+                      }
+                      onClick={() => handleOptionSelect(option.label)}>
+                      {option.icon && (
+                        <img src={option.icon} alt={option.label} />
+                      )}
+                      <span>{option.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-          {/* 전문가 배지 섹션 */}
-          <div className="filter-column">
-            <h3>전문가 배지</h3>
-            <ul>
-              <div className="badge-column">
-                <img src={goldWombat} alt="Gold Wombat" />
-                <span>골드 등급 전문가</span>
-              </div>
-              <div className="badge-column">
-                <img src={silverWombat} alt="Silver Wombat" />
-                <span>실버 등급 전문가</span>
-              </div>
-              <div className="badge-column">
-                <img src={bronzeWombat} alt="Bronze Wombat" />
-                <span>브론즈 등급 전문가</span>
-              </div>
-            </ul>
-          </div>
-          {/* 서비스 옵션 섹션 */}
-          <div className="filter-column">
-            <h3>서비스 옵션</h3>
-            <ul>
-              <li>웜뱃이 무료</li>
-              <li>웜뱃이 무료</li>
-              <li>웜뱃이 무료</li>
-              <li>웜뱃이 무료</li>
-            </ul>
+          {/* 하단에 버튼 추가 */}
+          <div className="filter-apply-button-wrapper">
+            {/* 초기화 버튼 */}
+            <button className="filter-reset-button" onClick={handleResetClick}>
+              초기화
+            </button>
+            {/* 적용 버튼 */}
+            <button className="filter-apply-button" onClick={handleApplyClick}>
+              적용
+            </button>
           </div>
         </div>
       )}
@@ -95,4 +103,4 @@ const SearchFilter = () => {
   );
 };
 
-export default SearchFilter;
+export default FilterDropdown;
