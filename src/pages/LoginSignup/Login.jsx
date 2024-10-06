@@ -4,8 +4,11 @@ import jwtDecode from "jwt-decode";
 import "./Login.css";
 import logo_blackSVG from "../../assets/images/logo_black.svg"; // 경로에 맞게 조정하세요
 import login_orangeSVG from "../../assets/images/login_orange.svg";
+import { useNavigate } from 'react-router-dom';
 
 function LoginSignup() {
+  const navigate = useNavigate();
+
   const handleSuccess = (response) => {
     const decodedToken = jwtDecode(response.credential);
     console.log("Google 로그인 성공:", decodedToken);
@@ -13,6 +16,10 @@ function LoginSignup() {
 
   const handleError = () => {
     console.log("Google 로그인 실패");
+  };
+
+  const handleSignupClick = () => {
+    navigate('/signup'); // 회원가입 버튼 클릭 시 /signup으로 이동
   };
 
   return (
@@ -52,7 +59,7 @@ function LoginSignup() {
         <div className="google-button-wrapper">
           <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
         </div>
-        <a href="/" className="signup-link">
+        <a href="#" className="signup-link" onClick={handleSignupClick}>
           회원가입하기
         </a>
       </div>

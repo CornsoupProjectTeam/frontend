@@ -15,6 +15,11 @@ function SignupEmail() {
         console.log(`메일 다시 보내기: ${email}`);
     };
 
+    const handleSignupComplete = () => {
+      // 이메일 인증을 완료한 후 signupinfo로 이동하는 로직 추가 필요
+      navigate('/signupinfo'); 
+  };
+
     return (
         <div className="signup-email-container">
             <div className="left-side">
