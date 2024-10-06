@@ -4,6 +4,7 @@
 .filter-bar-wrapper {
   position: relative;
   display: inline-block;
+  z-index: 1000;
 }
 
 .filter-dropdown {
@@ -112,10 +113,23 @@
   justify-content: flex-end;
   width: 100%;
   padding: 10px 0 0;
+  gap: calc(var(--Space-100, 4px) * 2);
 }
 
 .filter-apply-button {
   background-color: #fd8b3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.filter-reset-button {
+  background-color: #aca5a3;
   color: white;
   border: none;
   padding: 10px 20px;

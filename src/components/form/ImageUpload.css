@@ -1,0 +1,95 @@
+/* src/components/form/ImageUpload.css */
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* 스크롤바 배경 투명 */
+}
+
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  min-height: 150px;
+}
+
+.upload-area {
+  display: flex;
+  padding: 20px;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+
+  border: 2px dashed #f1853c;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  background-color: #ffe8d8;
+  cursor: pointer;
+  color: var(--orange-500, #f1853c);
+  font-family: "Pretendard";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.upload-area.dragging {
+  background-color: #ffe6cc;
+}
+
+.upload-area p {
+  margin: 0;
+}
+
+.upload-image {
+  width: var(--Icon-Medium, 32px);
+  height: var(--Icon-Medium, 32px);
+  flex-shrink: 0;
+  cursor: pointer; /* 이미지 클릭 가능 */
+}
+
+.uploaded-files {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.uploaded-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.uploaded-file p {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.uploaded-file button {
+  background-color: #f07a26;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.uploaded-file button:hover {
+  background-color: #d9534f;
+}
+
+button {
+  background-color: #f07a26;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}

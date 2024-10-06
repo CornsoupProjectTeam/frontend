@@ -1,5 +1,7 @@
 /* src/pages/Client/RegisterClient.css */
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -8,6 +10,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .register-project-page {
   padding: 20px;
+  z-index: 10000;
 }
 
 .register-project-button {
@@ -38,39 +41,169 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #ff6600;
 }
 
-/* 모달 내부 폼 스타일 */
+/* 모달 배경 스크롤 막기 */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* 모달 전체 스타일 */
 .register-project-modal-content {
-  padding: 20px;
+  display: flex;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+  align-self: stretch;
+  width: 90%; /* 반응형 너비 */
+  max-height: 80vh; /* 화면 80% 높이까지만 */
+  background-color: white;
+  border-radius: 8px;
+  overflow-y: auto; /* 모달 내부 세로 스크롤 활성화 */
 }
 
-.register-project-form section {
-  margin-bottom: 16px;
+h2 {
+  display: flex;
+  margin: 0;
+  padding: var(--Space-400, 16px) 0px var(--Space-400, 16px) 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue-900, #1b1e33);
+
+  font-family: "Pretendard";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-.register-project-form label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
+/* 폼 섹션 */
+.form-section {
+  display: flex;
+  width: 640px;
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
 }
 
-.register-project-form input,
-.register-project-form select {
+.form-section h3 {
+  margin: 0;
+  color: var(--blue-900, #1b1e33);
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.form-section label {
+  color: var(--grayscale-gray900, #6a6666);
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.form-section input[type="date"] {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
+  box-sizing: border-box;
+  height: var(--Icon-Large, 40px);
+  padding: 14px var(--Space-400, 16px);
+  border-radius: var(--Radius-200, 8px);
+  border: 1px solid var(--grayscale-gray800, #aca5a3);
+
+  background: var(--maincolor-white, #fff);
+  color: rgba(19, 17, 21, 0.4);
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.form-section input[type="text"],
+.form-section input[type="file"],
+.form-section textarea,
+.form-section select {
+  display: flex;
+  padding: 14px var(--Space-400, 16px);
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--Radius-200, 8px);
+  border: 1px solid var(--grayscale-gray800, #aca5a3);
+  background: var(--maincolor-white, #fff);
+  color: rgba(19, 17, 21, 0.4);
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+textarea {
+  display: flex;
+  height: 160px;
+  padding: 14px var(--Space-400, 16px);
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  resize: none;
+  overflow-y: auto;
+
+  color: rgba(19, 17, 21, 0.4);
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* 슬라이더 트랙 스타일 */
+.react-range-track {
+  background: #ddd;
   border-radius: 4px;
+  height: 8px;
+}
+
+/* 슬라이더 핸들 스타일 */
+.react-range-thumb {
+  height: 24px;
+  width: 24px;
+  background: #f07a26;
+  border-radius: 50%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid #f07a26;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 선택된 범위 */
+.react-range-selected {
+  background: #f07a26;
 }
 
 .submit-button {
-  padding: 12px 24px;
-  background-color: #fd8b3e;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-}
+  display: flex;
+  padding: 20px 36px;
+  width: 170px;
+  height: 50px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+  border-radius: 30px;
+  background: var(--grayscale-alpha-800, rgba(19, 17, 21, 0.8));
 
-.submit-button:hover {
-  background-color: #ff6600;
+  color: var(--maincolor-white, #fff);
+  text-align: center;
+
+  /* body/bold/Large - prominent */
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
 }

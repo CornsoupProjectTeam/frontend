@@ -9,7 +9,7 @@ import CaretDown from "../../assets/icons/CaretDown.svg";
 import CaretUp from "../../assets/icons/CaretUp.svg";
 import FilterIcon from "../../assets/icons/SearchFilter.svg";
 
-const FilterDropdown = ({ title, filters, filterIcon }) => {
+const FilterDropdown = ({ title, filters, filterIcon, onApply }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const filterRef = useRef(null);
@@ -33,6 +33,16 @@ const FilterDropdown = ({ title, filters, filterIcon }) => {
           ? prevSelected.filter((option) => option !== optionLabel) // 이미 선택된 항목이면 제거
           : [...prevSelected, optionLabel] // 선택되지 않은 항목이면 추가
     );
+  };
+
+  // "적용" 버튼 클릭 시 선택한 옵션을 적용하고 드롭다운을 닫는 함수
+  const handleApplyClick = () => {
+    onApply(selectedOptions); // 부모 컴포넌트로 선택된 옵션 전달
+    setIsFilterOpen(false); // 드롭다운 닫기
+  };
+
+  const handleResetClick = () => {
+    setSelectedOptions([]); // 모든 선택 항목 해제
   };
 
   useEffect(() => {
@@ -76,9 +86,16 @@ const FilterDropdown = ({ title, filters, filterIcon }) => {
               </div>
             ))}
           </div>
-          {/* 하단에 적용 버튼 추가 */}
+          {/* 하단에 버튼 추가 */}
           <div className="filter-apply-button-wrapper">
-            <button className="filter-apply-button">적용</button>
+            {/* 초기화 버튼 */}
+            <button className="filter-reset-button" onClick={handleResetClick}>
+              초기화
+            </button>
+            {/* 적용 버튼 */}
+            <button className="filter-apply-button" onClick={handleApplyClick}>
+              적용
+            </button>
           </div>
         </div>
       )}

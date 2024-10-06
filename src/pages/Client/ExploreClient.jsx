@@ -126,6 +126,7 @@ const ClientExplore = () => {
   const totalPages = Math.ceil(clientsData.length / ITEMS_PER_PAGE);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [sortCriteria, setSortCriteria] = useState("최신순");
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   const currentClients = clientsData.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
@@ -144,6 +145,12 @@ const ClientExplore = () => {
     setSortCriteria(option);
   };
 
+  const handleApplyFilters = (selectedOptions) => {
+    console.log("적용된 필터: ", selectedOptions);
+    setSelectedFilters(selectedOptions);
+    // 여기에서 필터 적용 로직을 구현할 수 있습니다.
+  };
+
   return (
     <div className="client-explore-page">
       {/* 페이지 헤더 */}
@@ -159,6 +166,7 @@ const ClientExplore = () => {
             title="검색 필터"
             filters={filterOptions}
             filterIcon="/icons/SearchFilter.svg"
+            onApply={handleApplyFilters}
           />
           <SortDropdown
             sortOptions={sortOptions}

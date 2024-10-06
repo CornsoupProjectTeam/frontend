@@ -3,15 +3,21 @@
 import React from "react";
 import "./Modal.css";
 
+/* assets */
+import CloseIcon from "../../assets/icons/CircleClose.svg"; // 닫기 이미지 경로
+
 const Modal = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null; // 모달이 열리지 않으면 아무것도 렌더링하지 않음
+  if (!isOpen) return null;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={onClose}>
-          &times;
-        </button>
+        <img
+          src={CloseIcon}
+          alt="닫기"
+          className="close-button"
+          onClick={onClose}
+        />
         {children} {/* 모달 안에 들어갈 컨텐츠 */}
       </div>
     </div>
