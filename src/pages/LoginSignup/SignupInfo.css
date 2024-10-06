@@ -1,0 +1,124 @@
+/* 전체 컨테이너 스타일 */
+.signup-info-container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: #fbfaf9;
+    padding: 40px;
+    height: 1300px;
+}
+
+/* 왼쪽 사이드 */
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.logo-image {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.slogan {
+    font-size: 18px;
+    color: #6c6c6c;
+    margin-bottom: 20px;
+}
+
+.logo-svg {
+    width: 180px;
+    margin-top: 20px;
+}
+
+/* 오른쪽 입력 폼 */
+.signup-info-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    top: 200px; /* 나에게 꼭 맞는 문구와 높이 맞춤 (값은 원하는 대로 조정 가능) */
+    position: absolute; /* 절대 위치 지정 */
+    left: 424px; /* 왼쪽으로부터 424px 떨어짐 */
+    right: 64px; /* 오른쪽으로부터 64px 떨어짐 */
+    max-width: calc(100% - 488px); /* 양쪽 여백을 고려한 최대 너비 설정 */
+    height: 1000px; 
+}
+
+.signup-info-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* 인풋 필드와 버튼 그룹 */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.input-field.error {
+    border-color: red;
+}
+
+.input-with-check {
+    display: flex;
+    gap: 10px;
+}
+
+.check-button {
+    padding: 10px 20px;
+    background-color: #ff7b42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.check-button:hover {
+    background-color: #e66a34;
+}
+
+/* 체크박스가 체크된 상태일 때 */
+input[type="checkbox"]:checked + .custom-checkbox::before {
+    background-color: orange; /* 주황색으로 변경 */
+}
+
+/* 메시지 스타일 */
+.valid-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.agreement-section a{
+    color: #F1853C
+}
