@@ -1,7 +1,7 @@
 // src/components/footer/Footer.jsx
 
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useMatch } from "react-router-dom";
 
 import "./Footer.css";
 
@@ -12,11 +12,22 @@ const Footer = () => {
   // 현재 경로를 가져옴
   const location = useLocation();
 
-  // 헤더를 숨길 경로 리스트 설정
-  const hideHeaderPaths = ["/"];
+  // 숨길 경로 리스트
+  const hideFooterPaths = [
+    "/", // 홈
+  ];
 
-  // 현재 경로가 숨겨야 하는 경로에 포함되어 있으면 null 반환
-  if (hideHeaderPaths.includes(location.pathname)) {
+  // 클라이언트 상세 동적 경로 매칭
+  const isClientDetailsPage = useMatch(
+    "/explore-client/details/:client_post_id"
+  );
+
+  // 경로 숨기기 조건: 고정된 경로나 동적 경로가 포함된 경우
+  const shouldHideFooter =
+    hideFooterPaths.includes(location.pathname) || isClientDetailsPage;
+
+  // 조건에 맞으면 푸터를 숨김
+  if (shouldHideFooter) {
     return null;
   }
 

@@ -9,6 +9,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import Signup from "./pages/LoginSignup/Signup";
 import SignupEmail from "./pages/LoginSignup/SignupEmail";
 import ExploreClient from "./pages/Client/ExploreClient";
+import DetailClient from "./pages/Client/DetailClient";
 
 const App = () => {
   return (
@@ -20,6 +21,10 @@ const App = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/signupemail" element={<SignupEmail />} />
           <Route path="/explore-client" element={<ExploreClient />} />
+          <Route
+            path="/explore-client/details/:client_post_id"
+            element={<DetailClient />}
+          />
         </Routes>
         <Footer />
       </Router>

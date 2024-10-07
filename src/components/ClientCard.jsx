@@ -1,15 +1,17 @@
 // src/components/ClientCard.jsx
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./ClientCard.css";
 
 /* assets */
-import favoritePostOff from "../assets/icons/favoritePost_off.svg";
-import favoritePostOn from "../assets/icons/favoritePost_on.svg";
+import favoriteOff from "../assets/icons/favoriteOff.svg";
+import favoriteOn from "../assets/icons/favoriteOn.svg";
 import detailBtn from "../assets/icons/ExploreProject_detailBtn.svg";
 
 const ClientCard = ({
+  id,
   title,
   userId,
   nickname,
@@ -42,14 +44,16 @@ const ClientCard = ({
           <div className="client-card-buttons">
             {/* 찜하기 버튼 */}
             <img
-              src={isFavorited ? favoritePostOn : favoritePostOff} // 상태에 따라 아이콘 변경
+              src={isFavorited ? favoriteOn : favoriteOff} // 상태에 따라 아이콘 변경
               alt={isFavorited ? "찜 취소" : "찜하기"}
               onClick={handleFavoriteToggle} // 클릭 이벤트 핸들러
               style={{ cursor: "pointer" }} // 클릭 가능한 버튼 스타일 추가
             />
-            <a href="/explore-client/details">
+            <Link to={`/explore-client/details/${id}`}>
+              {" "}
+              {/* URL에 id 추가 */}
               <img src={detailBtn} alt="자세히 보기" />
-            </a>
+            </Link>
           </div>
         </div>
         {/* 기간 및 예산 정보 */}

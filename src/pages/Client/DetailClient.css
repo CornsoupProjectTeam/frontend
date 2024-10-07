@@ -1,0 +1,252 @@
+/* src/pages/Client/DetailClient.css */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* 전체 화면 높이로 설정 */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 최소 높이를 100vh로 설정하여 페이지가 축소되지 않게 함 */
+}
+
+.client-detail-page {
+  flex-grow: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.client-detail-card {
+  display: flex;
+  margin: 24px 60px 0 60px;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+  align-self: stretch;
+
+  border-radius: 16px;
+  background: var(--maincolor-white, #fff);
+
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.client-detail-header h1 {
+  margin: 0;
+  color: var(--blue-900, #1b1e33);
+
+  /* headline/large */
+  font-family: "Pretendard";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.client-detail-header {
+  display: flex;
+  padding: var(--Space-400, 16px) var(--Space-100, 4px) var(--Space-400, 16px)
+    0px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-400, 16px);
+}
+.client-detail-header img {
+  width: var(--Icon-Large, 40px);
+  height: var(--Icon-Large, 40px);
+}
+
+.client-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+  align-self: stretch;
+}
+
+.client-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.client-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.client-profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-description h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b1e33;
+  margin-bottom: 12px;
+}
+
+.client-description p {
+  font-size: 16px;
+  color: #6a6666;
+  line-height: 1.5;
+}
+
+.client-info {
+  display: flex;
+  padding: var(--Space-200, 8px) var(--Space-300, 12px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+}
+
+.client-info h3,
+p {
+  margin: 0;
+}
+
+.client-badges {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+}
+
+.client-details-content {
+  margin-top: 20px;
+}
+
+.client-details-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.details-container {
+  display: flex;
+  width: 640px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.details-container h4 {
+  color: var(--blue-900, #1b1e33);
+  margin: 0;
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.details-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-400, 16px);
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.details-section h4 {
+  color: var(--grayscale-gray900, #6a6666);
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.details-section p {
+  display: flex;
+  padding: 14px var(--Space-400, 16px);
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--Radius-200, 8px);
+  border: 1.5px solid var(--grayscale-gray800, #aca5a3);
+  background: var(--grayscale-gray100, #fbfaf9);
+}
+
+.image-list {
+  display: flex;
+  gap: 20px;
+  align-self: stretch;
+  overflow-x: auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.image-list img {
+  height: 180px;
+  cursor: pointer;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-list img:hover {
+  transform: scale(1.05);
+}
+
+.other-projects-section {
+  display: flex;
+  margin: 24px 60px 80px 60px;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+  align-self: stretch;
+
+  border-radius: 16px;
+  background: var(--maincolor-white, #fff);
+
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.other-projects-section h2 {
+  display: flex;
+  padding: var(--Space-400, 16px) var(--Space-100, 4px) var(--Space-400, 16px)
+    0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue-900, #1b1e33);
+  font-family: "Pretendard";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.other-projects {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--Space-400, 16px);
+  align-self: stretch;
+  overflow-x: auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.other-projects img {
+  height: 180px;
+  cursor: pointer;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
