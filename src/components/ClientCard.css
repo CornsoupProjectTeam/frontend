@@ -20,6 +20,7 @@
 .client-card-title {
   color: #000;
   margin: 0;
+  padding: 0;
   /* headline/small */
   font-family: "Pretendard";
   font-size: 24px;
@@ -71,8 +72,7 @@
 }
 
 .nickname {
-  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
-  margin: 0;
+  color: var(--grayscale-alpha-600, rgba(19, 17, 21, 0.6));
 
   /* title/bold/Medium */
   font-family: "Pretendard";
