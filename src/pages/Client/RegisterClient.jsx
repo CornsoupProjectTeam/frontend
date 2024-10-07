@@ -1,7 +1,6 @@
 // src/pages/Client/RegisterClient.jsx
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Range } from "react-range";
 
 import "./RegisterClient.css";
@@ -12,17 +11,9 @@ import Modal from "../../components/popup/Modal";
 import ImageUpload from "../../components/form/ImageUpload";
 import TagInput from "../../components/form/TagInput";
 
-const RegisterClient = () => {
+const RegisterProject = () => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [values, setValues] = useState([10, 200]); // 예산 값
-  const [title, setTitle] = useState(""); // 제목
-  const [budgetRange, setBudgetRange] = useState([10, 200]);
-  const [deadline, setDeadline] = useState(null); // 모집 마감일
-  const [projectEnd, setProjectEnd] = useState(null); // 제작 마감일
-  const [tags, setTags] = useState([]); // 태그
-  const [images, setImages] = useState([]); // 이미지
-
-  const navigate = useNavigate();
+  const [values, setValues] = useState([10, 200]);
 
   const openModal = () => {
     setModalOpen(true);
@@ -35,20 +26,8 @@ const RegisterClient = () => {
   };
 
   const handleSubmit = () => {
-    const projectId = Math.floor(Math.random() * 1000); // 고유한 프로젝트 ID 생성 (데모용)
-    // 폼 제출 시 데이터를 DetailClient로 보냄
-    const projectData = {
-      title,
-      budgetRange,
-      deadline,
-      projectEnd,
-      tags,
-      images,
-    };
-    // 데이터를 DetailClient로 넘기기
-    navigate("/explore-client/details/${projectId}", {
-      state: { projectData },
-    });
+    // 여기에 폼 제출 로직을 추가하세요.
+    console.log("Form submitted");
     closeModal();
   };
 
@@ -69,25 +48,19 @@ const RegisterClient = () => {
           <section className="form-section">
             <h3>기본 정보</h3>
             <label>제목*</label>
-            <input
-              type="text"
-              placeholder="제목을 입력하세요..."
-              value={title}
-              onChange={(e) => setTitle(e.target.value)} // 제목 입력
-            />
+            <input type="text" placeholder="제목을 입력하세요..." />
           </section>
 
-          {/* 희망 예산 섹션 */}
           <section className="form-section">
             <label>
-              희망 예산*: {budgetRange[0]}만원 ~ {budgetRange[1]}만원
+              희망 예산*: {values[0]}만원 ~ {values[1]}만원
             </label>
             <Range
-              values={budgetRange}
+              values={values}
               step={1}
               min={0}
               max={200}
-              onChange={(values) => setBudgetRange(values)}
+              onChange={(values) => setValues(values)}
               renderTrack={({ props, children }) => (
                 <div
                   {...props}
@@ -96,12 +69,12 @@ const RegisterClient = () => {
                     height: "6px",
                     width: "100%",
                     background: `linear-gradient(to right, 
-                    #ddd 0%, 
-                    #ddd ${(budgetRange[0] / 200) * 100}%, 
-                    #f07a26 ${(budgetRange[0] / 200) * 100}%, 
-                    #f07a26 ${(budgetRange[1] / 200) * 100}%, 
-                    #ddd ${(budgetRange[1] / 200) * 100}%, 
-                    #ddd 100%)`, // 선택되지 않은 부분을 회색으로 처리
+            #ddd 0%, 
+            #ddd ${(values[0] / 200) * 100}%, 
+            #f07a26 ${(values[0] / 200) * 100}%, 
+            #f07a26 ${(values[1] / 200) * 100}%, 
+            #ddd ${(values[1] / 200) * 100}%, 
+            #ddd 100%)`, // 선택되지 않은 부분을 회색으로 처리
                     borderRadius: "4px",
                     margin: "20px 0",
                   }}>
@@ -129,38 +102,27 @@ const RegisterClient = () => {
           <section className="form-section">
             <h3>모집 기간</h3>
             <label>의뢰 모집 마감일*</label>
-            <CustomDatePicker
-              selected={deadline}
-              onChange={(date) => setDeadline(date)}
-            />
+            <CustomDatePicker />
           </section>
 
           {/* 제작 기간 */}
           <section className="form-section">
             <h3>제작 기간</h3>
             <label>희망 제작 마감일*</label>
-            <CustomDatePicker
-              selected={projectEnd}
-              onChange={(date) => setProjectEnd(date)}
-            />
+            <CustomDatePicker />
           </section>
 
           {/* 디자인 작업물 */}
           <section className="form-section">
             <h3>원하는 디자인 작업물</h3>
             <label>의뢰 요구사항*</label>
-            <TagInput tags={tags} setTags={setTags} />
+            <TagInput />
             <label>프로젝트를 포함할 수 있는 이미지를 등록하세요.</label>
-            <ImageUpload
-              userId={userId}
-              images={images}
-              setImages={setImages}
-            />
+            <ImageUpload userId={userId} />
           </section>
-
           {/* 하단 등록 버튼 */}
-          <section className="form-section">
-            <button className="submit-button" onClick={handleSubmit}>
+          <section className="project-submit-area">
+            <button className="project-submit-button" onClick={handleSubmit}>
               등록하기
             </button>
           </section>
@@ -170,4 +132,4 @@ const RegisterClient = () => {
   );
 };
 
-export default RegisterClient;
+export default RegisterProject;

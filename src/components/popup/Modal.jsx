@@ -11,16 +11,14 @@ const Modal = ({ isOpen, onClose, children }) => {
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content-container">
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <img
           src={CloseIcon}
           alt="닫기"
           className="close-button"
           onClick={onClose}
         />
-        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-          {children} {/* 모달 안에 들어갈 컨텐츠 */}
-        </div>
+        {children} {/* 모달 안에 들어갈 컨텐츠 */}
       </div>
     </div>
   );

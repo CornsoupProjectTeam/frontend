@@ -46,11 +46,10 @@
 .sort-options {
   display: flex;
   padding: 18px 14px;
+  align-items: flex-start;
   gap: 8px;
   top: calc(100% + 8px);
   position: absolute;
-  top: calc(100% + 8px);
-  display: flex;
   flex-direction: column;
 
   border-radius: 16px;
@@ -68,10 +67,13 @@
   cursor: pointer;
   font-size: 14px;
   color: var(--grayscale-gray800, #aca5a3);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   transition: background-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sort-options li.selected {

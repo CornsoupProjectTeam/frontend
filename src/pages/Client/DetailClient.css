@@ -1,17 +1,18 @@
 /* src/pages/Client/DetailClient.css */
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%; /* 전체 화면 높이로 설정 */
+  height: 100%;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* 최소 높이를 100vh로 설정하여 페이지가 축소되지 않게 함 */
+  min-height: 100vh;
 }
 
 .client-detail-page {
@@ -249,4 +250,28 @@ p {
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.image-modal-content {
+  min-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.modal-open {
+  overflow: hidden;
 }

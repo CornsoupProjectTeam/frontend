@@ -5,9 +5,6 @@ import { useParams, useLocation, useNavigate } from "react-router-dom";
 
 import "./DetailClient.css";
 
-/* components */
-import Modal from "../../components/popup/Modal";
-
 /* assets */
 import LeftBtn from "../../assets/icons/LeftBtn.svg";
 
@@ -24,7 +21,7 @@ const DetailClient = () => {
   const projectData = location.state?.projectData || {};
 
   const [clientData, setClientData] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null); // 이미지 선택 시 사용할 state
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     // 페이지 진입 시 헤더의 배경색을 회색으로 변경
@@ -71,12 +68,12 @@ const DetailClient = () => {
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
-    document.body.classList.add("modal-open");
+    document.body.classList.add("modal-open"); // 스크롤 방지
   };
 
-  const closeModal = () => {
+  const closeImageView = () => {
     setSelectedImage(null);
-    document.body.classList.remove("modal-open");
+    document.body.classList.remove("modal-open"); // 스크롤 재활성화
   };
 
   if (!clientData) {
@@ -183,16 +180,16 @@ const DetailClient = () => {
           <img src={sampleProject} alt="Sample Project" />
         </div>
       </div>
-      {/* 이미지 모달 */}
-      <Modal isOpen={!!selectedImage} onClose={closeModal}>
-        {selectedImage && (
+      {/* 이미지 확대 시 배경과 함께 보이기 */}
+      {selectedImage && (
+        <div className="image-modal-overlay" onClick={closeImageView}>
           <img
             src={selectedImage}
             alt="확대된 이미지"
-            className="modal-image"
+            className="image-modal-content"
           />
-        )}
-      </Modal>
+        </div>
+      )}
     </div>
   );
 };

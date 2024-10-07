@@ -49,7 +49,7 @@ const SortDropdown = ({ sortOptions, sortCriteria, onSortChange }) => {
 
       {/* 드롭다운 메뉴 */}
       {isSortOpen && (
-        <ul className="sort-options">
+        <div className="sort-options">
           {sortOptions.map((option, index) => (
             <li
               key={index}
@@ -58,7 +58,7 @@ const SortDropdown = ({ sortOptions, sortCriteria, onSortChange }) => {
               {option}
             </li>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
