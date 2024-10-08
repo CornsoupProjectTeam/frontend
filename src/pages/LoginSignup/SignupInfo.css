@@ -49,7 +49,8 @@
     left: 424px; /* 왼쪽으로부터 424px 떨어짐 */
     right: 64px; /* 오른쪽으로부터 64px 떨어짐 */
     max-width: calc(100% - 488px); /* 양쪽 여백을 고려한 최대 너비 설정 */
-    height: 1000px; 
+    height: 1099px; 
+    align-items: flex-start; /* 왼쪽 정렬 */
 }
 
 .signup-info-form h2 {
@@ -67,6 +68,10 @@
     font-size: 14px;
     color: #333;
     margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 200px;
 }
 
 .input-field {
@@ -87,23 +92,51 @@
     gap: 10px;
 }
 
-.check-button {
-    padding: 10px 20px;
-    background-color: #ff7b42;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+.agreement-section p {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.check-button:hover {
-    background-color: #e66a34;
+/* 기본 체크박스를 숨기기 */
+input[type="checkbox"] {
+    display: none;
 }
 
-/* 체크박스가 체크된 상태일 때 */
+/* 커스텀 체크박스 */
+.custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    position: relative;
+    vertical-align: middle;
+}
+
+/* 체크되지 않았을 때 스타일 */
+.custom-checkbox::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 4px;
+}
+
+/* 체크된 상태일 때 박스를 주황색으로 */
 input[type="checkbox"]:checked + .custom-checkbox::before {
-    background-color: orange; /* 주황색으로 변경 */
+    background-color: orange;
+}
+
+/* 체크 표시 */
+input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: '✔';
+    color: white;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    font-size: 16px;
 }
 
 /* 메시지 스타일 */
@@ -121,4 +154,67 @@ input[type="checkbox"]:checked + .custom-checkbox::before {
 
 .agreement-section a{
     color: #F1853C
+}
+
+.submit-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    align-self: flex-start; /* 버튼을 왼쪽에 정렬 */
+    margin-top: 20px; /* 위쪽에 여백 추가 */
+    box-sizing: border-box;
+    width: auto;
+    position: static; /* 절대 위치 제거 */
+}
+
+/* 모달 오버레이 스타일 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 다른 요소들 위에 표시되도록 */
+}
+
+/* 모달 콘텐츠 스타일 */
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 400px;
+    z-index: 1001;
+}
+
+.modal-content p {
+    color: #ACA5A3;
+}
+
+/* 모달 이미지 스타일 */
+.modal-image {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* 모달 버튼 스타일 */
+.modal-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    float: right;
 }
