@@ -120,7 +120,7 @@ const filterOptions = [
 ];
 const sortOptions = ["최신순", "인기순", "추천순"];
 
-const ClientExplore = () => {
+const ExploreClient = () => {
   const [clientsData] = useState(exampleClients);
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(clientsData.length / ITEMS_PER_PAGE);
@@ -215,4 +215,4 @@ const ClientExplore = () => {
   );
 };
 
-export default ClientExplore;
+export default ExploreClient;

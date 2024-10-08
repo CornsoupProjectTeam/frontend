@@ -39,7 +39,7 @@ const SortDropdown = ({ sortOptions, sortCriteria, onSortChange }) => {
   };
 
   return (
-    <div className="sort-dropdown-wrapper" ref={sortRef}>
+    <div className="sort-bar-wrapper" ref={sortRef}>
       {/* 정렬 버튼 */}
       <button className="sort-dropdown" onClick={toggleSortDropdown}>
         <img src={SortIcon} alt="정렬" />
@@ -49,15 +49,19 @@ const SortDropdown = ({ sortOptions, sortCriteria, onSortChange }) => {
 
       {/* 드롭다운 메뉴 */}
       {isSortOpen && (
-        <div className="sort-options">
-          {sortOptions.map((option, index) => (
-            <li
-              key={index}
-              className={sortCriteria === option ? "selected" : ""}
-              onClick={() => handleSortChange(option)}>
-              {option}
-            </li>
-          ))}
+        <div className="sort-dropdown-container">
+          <div className="sort-column">
+            <ul>
+              {sortOptions.map((option, index) => (
+                <li
+                  key={index}
+                  className={sortCriteria === option ? "selected" : ""}
+                  onClick={() => handleSortChange(option)}>
+                  {option}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>

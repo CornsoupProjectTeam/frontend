@@ -1,12 +1,11 @@
-// src/pages/Client/DetailClient.jsx
-
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 
 import "./DetailClient.css";
 
 /* assets */
 import LeftBtn from "../../assets/icons/LeftBtn.svg";
+import RightBtn from "../../assets/icons/RightBtn.svg";
 
 /* sample profile image */
 import sampleProfile from "../../assets/images/image 30.png";
@@ -22,6 +21,8 @@ const DetailClient = () => {
 
   const [clientData, setClientData] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
+  const otherProjectsRef = useRef(null);
+  const imageListRef = useRef(null);
 
   useEffect(() => {
     // 페이지 진입 시 헤더의 배경색을 회색으로 변경
@@ -68,12 +69,26 @@ const DetailClient = () => {
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
-    document.body.classList.add("modal-open"); // 스크롤 방지
+    document.body.classList.add("modal-open");
   };
 
   const closeImageView = () => {
     setSelectedImage(null);
-    document.body.classList.remove("modal-open"); // 스크롤 재활성화
+    document.body.classList.remove("modal-open");
+  };
+
+  const scrollLeft = () => {
+    if (otherProjectsRef.current) {
+      const width = otherProjectsRef.current.clientWidth;
+      otherProjectsRef.current.scrollBy({ left: -width, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (otherProjectsRef.current) {
+      const width = otherProjectsRef.current.clientWidth;
+      otherProjectsRef.current.scrollBy({ left: width, behavior: "smooth" });
+    }
   };
 
   if (!clientData) {
@@ -168,18 +183,35 @@ const DetailClient = () => {
           </div>
         </div>
       </div>
+
       <div className="other-projects-section">
         <h2>다른 의뢰글 더 보기</h2>
-        <div className="other-projects">
-          <img src={sampleProject} alt="Sample Project" />
-          <img src={sampleProject} alt="Sample Project" />
-          <img src={sampleProject} alt="Sample Project" />
-          <img src={sampleProject} alt="Sample Project" />
-          <img src={sampleProject} alt="Sample Project" />
-          <img src={sampleProject} alt="Sample Project" />
-          <img src={sampleProject} alt="Sample Project" />
+        <div className="scroll-buttons-container">
+          <button onClick={scrollLeft} className="scroll-left">
+            <img src={LeftBtn} alt="Scroll Left" />
+          </button>
+          <div className="other-projects" ref={otherProjectsRef}>
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+            <img src={sampleProject} alt="Sample Project" />
+          </div>
+          <button onClick={scrollRight} className="scroll-right">
+            <img src={RightBtn} alt="Scroll Right" />
+          </button>
         </div>
       </div>
+
       {/* 이미지 확대 시 배경과 함께 보이기 */}
       {selectedImage && (
         <div className="image-modal-overlay" onClick={closeImageView}>

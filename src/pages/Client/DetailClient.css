@@ -275,3 +275,54 @@ p {
 .modal-open {
   overflow: hidden;
 }
+
+.scroll-buttons-container {
+  position: relative;
+  width: 100%; /* 부모 컨테이너가 꽉 차게 */
+  display: flex;
+  align-items: center;
+}
+
+.scroll-left,
+.scroll-right {
+  position: absolute;
+  top: 50%; /* 버튼을 수직 중앙에 맞추기 */
+  transform: translateY(-50%);
+  background-color: transparent; /* 반투명 배경 */
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px; /* 둥근 버튼 */
+  z-index: 1; /* 이미지 위에 표시되도록 */
+}
+
+.scroll-left {
+  left: -20px; /* 이미지 왼쪽 바깥에 위치 */
+}
+
+.scroll-right {
+  right: -20px; /* 이미지 오른쪽 바깥에 위치 */
+}
+
+.scroll-left img,
+.scroll-right img {
+  width: 40px;
+}
+
+.other-projects {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  margin: 0 40px; /* 화살표 버튼과 충돌하지 않도록 여백 추가 */
+}
+
+.other-projects img {
+  height: 180px;
+  cursor: pointer;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
