@@ -4,6 +4,7 @@ import './SignupInfo.css'; // CSS 파일을 별도로 생성
 import Select from 'react-select'; // react-select 패키지 사용
 import logo_blackSVG from "../../assets/images/logo_black.svg"; // 경로에 맞게 조정하세요
 import login_orangeSVG from "../../assets/images/login_orange.svg";
+import logo_twoSVG from "../../assets/images/logo_two.svg"
 
 function SignupInfo() {
     const location = useLocation();
@@ -20,6 +21,7 @@ function SignupInfo() {
     const [businessFields, setBusinessFields] = useState([]); // 비즈니스 분야 멀티 셀렉션
     const [interestFields, setInterestFields] = useState([]); // 관심 분야 멀티 셀렉션
     const [isAgreed, setIsAgreed] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleUseridChange = (event) => {
         setUserid(event.target.value);
@@ -60,6 +62,18 @@ function SignupInfo() {
         const data = await response.json();
         setIsNicknameValid(data.isAvailable);
     };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // 가입 완료 로직
+        setIsModalOpen(true); // 모달 열기
+    };
+
+    const handleModalClose = () => {
+        setIsModalOpen(false); // 모달 닫기
+        // 추가적으로 페이지 이동이나 다른 로직 처리
+    };
+
 
     // 비즈니스 분야 옵션
     const businessOptions = [
@@ -198,17 +212,33 @@ function SignupInfo() {
                     <p>
                         개인정보 수집/이용 안내 <a href="#privacy">자세히 보기</a>
                     </p>
-                    <label>
+                    <label className="custom-checkbox-label">
                         <input type="checkbox" id= "agreement" checked={isAgreed} onChange={handleAgreementChange} />
+                        <span className="custom-checkbox"></span> {/* 커스텀 체크박스 */}
                         동의합니다.
                     </label>
-                </div>
 
-                {/* 가입 완료 버튼 */}
-                <button type="submit" className="submit-button">
+                    {/* 가입 완료 버튼 */}
+                    <button type="submit" className="submit-button" onClick={handleSubmit}>
                     가입 완료하기
-                </button>
+                    </button>
+                </div>
             </div>
+
+            {/* 회원가입 완료 모달 */}
+            {isModalOpen && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <h2>회원가입이 완료되었습니다!</h2>
+                        <img src={logo_twoSVG} alt="축하 이미지" className="modal-image" />
+                        <p>이제, 잇칭에서 꼭 맞는 디자이너를 찾아보세요!</p>
+                        <button onClick={handleModalClose} className="modal-button">
+                            시작하기
+                        </button>
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 }

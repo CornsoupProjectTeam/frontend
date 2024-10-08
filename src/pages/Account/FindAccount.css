@@ -8,7 +8,7 @@
     padding: 40px; /* 컨테이너 상단 및 좌측 여백 */
     justify-content: space-between; /* 요소 간 공간을 유지 */
     height: 960px; /* 페이지 높이 설정 */
-    width: 1700px;
+    width: 100%; /* 화면 너비에 맞추어 확장 */
 }
 
 /* 왼쪽 이미지와 텍스트를 세로로 정렬 */
@@ -41,12 +41,13 @@
     margin-top: 20px;
 }
 
-/* 오른쪽 로그인 폼 */
-.right-side-login {
+/* 우측 폼 영역 스타일 */
+.accountfind-side {
     flex: 5;
     display: flex;
     flex-direction: column;
     justify-content: left;
+    justify-content: flex-start;
     align-items: flex-start;
     background-color: #fff;
     padding: 40px;
@@ -60,36 +61,36 @@
     left: 424px; /* 왼쪽으로부터 424px 떨어짐 */
     right: 64px; /* 오른쪽으로부터 64px 떨어짐 */
     max-width: calc(100% - 488px); /* 양쪽 여백을 고려한 최대 너비 설정 */
-    height: 600px; 
-    
+    height: 750px;
 }
 
-
-.login-heading {
+/* 헤딩 스타일 */
+.find-heading {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: left;
     margin-top: 30px; 
-    color:#000000;
+    color: #000000;
 }
 
-.login-form {
+/* 폼 스타일 */
+.find-form {
     width: 100%;
     max-width: 300px;
     color: #ACA5A3;
     margin-top: 56px;
 }
 
-.login-input-group {
+.find-input-group {
     margin-bottom: 30px;
 }
 
-.login-input-group label {
+.find-input-group label {
     display: block;
     margin-bottom: 5px;
 }
 
-.login-input-group input {
+.find-input-group input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -97,33 +98,30 @@
     border-radius: 4px;
 }
 
-.login-button {
+/* 버튼 스타일 */
+.find-button {
     width: 107%;
-    background-color: #333;
+    background-color: #131115CC;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    
 }
 
+/* 기타 링크 스타일 */
 .forgot-password, .signup-link {
     display: block;
     text-align: center;
     color: #ACA5A3;
     text-decoration: none;
-    margin-top: 30px; 
-    text-decoration: underline; /* 밑줄 추가 */
+    margin-top: 20px;
+    text-decoration: underline;
 }
 
 .signup-link {
     color: orange;
     font-weight: bold;
-    text-decoration: underline; /* 밑줄 추가 */
+    text-decoration: underline;
     margin-top: 36px;
-}
-
-.google-button-wrapper {
-    margin-top: 56px; /* 구글 로그인 버튼 위의 여백 */
 }

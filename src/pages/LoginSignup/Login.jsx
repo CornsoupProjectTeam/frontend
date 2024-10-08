@@ -22,6 +22,10 @@ function LoginSignup() {
     navigate('/signup'); // 회원가입 버튼 클릭 시 /signup으로 이동
   };
 
+  const handleForgotPasswordClick = () => {
+    navigate("/accountfind"); // AccountFind 페이지로 이동
+  };
+
   return (
     <div className="login-container">
       <div className="left-side">
@@ -34,7 +38,7 @@ function LoginSignup() {
         <img src={login_orangeSVG} alt="Gradient Logo" className="logo-svg" />
       </div>
 
-      <div className="right-side">
+      <div className="right-side-login">
         <h2 className="login-heading">로그인</h2> {/* New heading */}
         <form className="login-form">
           <div className="login-input-group">
@@ -53,8 +57,8 @@ function LoginSignup() {
             로그인하기
           </button>
         </form>
-        <a href="/" className="forgot-password">
-          비밀번호를 잊었어요
+        <a href="/" className="forgot-password" onClick={handleForgotPasswordClick}>
+          아이디/비밀번호를 잊었어요
         </a>
         <div className="google-button-wrapper">
           <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
