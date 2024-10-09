@@ -15,6 +15,7 @@ import Findpw from "./pages/Account/Findpw";
 import ExploreClient from "./pages/Client/ExploreClient";
 import DetailClient from "./pages/Client/DetailClient";
 import ExploreFreelancer from "./pages/Freelancer/ExploreFreelancer";
+import DetailFreelancer from "./pages/Freelancer/DetailFreelancer";
 
 const App = () => {
   return (
@@ -27,14 +28,18 @@ const App = () => {
           <Route path="/signupemail" element={<SignupEmail />} />
           <Route path="/signupinfo" element={<SignupInfo />} />
           <Route path="/findaccount" element={<FindAccount />} />
-          <Route path="/findid" element={<Findid/>} />
-          <Route path="/findpw" element={<Findpw/>} />
+          <Route path="/findid" element={<Findid />} />
+          <Route path="/findpw" element={<Findpw />} />
           <Route path="/explore-client" element={<ExploreClient />} />
           <Route
             path="/explore-client/details/:client_post_id"
             element={<DetailClient />}
           />
           <Route path="/explore-freelancer" element={<ExploreFreelancer />} />
+          <Route
+            path="/profile/freelancer/:freelancer_user_id/details"
+            element={<DetailFreelancer />}
+          />
         </Routes>
         <Footer />
       </Router>

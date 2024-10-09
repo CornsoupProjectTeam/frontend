@@ -1,3 +1,5 @@
+/* src/components/FreelancerCard.css */
+
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 .freelancer-card {
@@ -11,7 +13,7 @@
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
-.freelancer-card-wrapper {
+.FC-freelancer-card-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -19,7 +21,7 @@
   width: 100%;
 }
 
-.freelancer-left {
+.FC-freelancer-left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,7 +30,7 @@
   flex-grow: 1;
 }
 
-.freelancer-profile {
+.FC-freelancer-profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,14 +38,14 @@
   gap: var(--Space-200, 8px);
 }
 
-.profile-image {
+.FC-profile-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.freelancer-info {
+.FC-freelancer-info {
   display: flex;
   padding: var(--Space-200, 8px) 0px;
   flex-direction: column;
@@ -51,19 +53,19 @@
   gap: var(--Space-300, 12px);
 }
 
-.freelancer-info-nameId {
+.FC-freelancer-info-nameId {
   display: flex;
   align-items: center;
   gap: var(--Space-300, 12px);
 }
 
-.freelancer-info-work {
+.FC-freelancer-info-work {
   display: flex;
   align-items: center;
   gap: var(--Space-300, 12px);
 }
 
-.freelancer-name {
+.FC-freelancer-name {
   color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
 
   /* title/bold/Large */
@@ -74,7 +76,7 @@
   line-height: normal;
 }
 
-.freelancer-userId {
+.FC-freelancer-userId {
   color: var(--grayscale-alpha-500, rgba(19, 17, 21, 0.5));
 
   /* body/medium/Medium */
@@ -85,7 +87,7 @@
   line-height: normal;
 }
 
-.freelancer-stats {
+.FC-freelancer-stats {
   display: flex;
   align-items: flex-start;
   gap: var(--Space-300, 12px);
@@ -100,13 +102,13 @@
   line-height: normal;
 }
 
-.freelancer-tags {
+.FC-freelancer-tags {
   display: flex;
   align-items: flex-start;
   gap: var(--Space-300, 12px);
 }
 
-.weekend-work-tag {
+.FC-weekend-work-tag {
   display: flex;
   height: 18px;
   width: 86px;
@@ -127,7 +129,7 @@
   line-height: normal;
 }
 
-.freelancer-badge {
+.FC-freelancer-badge {
   display: flex;
   height: var(--Icon-Medium, 32px);
   padding: 6px var(--Space-200, 8px);
@@ -136,7 +138,7 @@
   padding: 0;
 }
 
-.pretest-score-tag {
+.FC-pretest-score-tag {
   display: flex;
   height: 18px;
   width: 86px;
@@ -158,18 +160,18 @@
   line-height: normal;
 }
 
-.freelancer-actions {
+.FC-freelancer-actions {
   display: flex;
   align-items: center;
   gap: var(--Space-200, 8px);
 }
 
-.freelancer-actions img {
+.FC-freelancer-actions img {
   width: 51px;
   height: 51px;
 }
 
-.detail-link-button {
+.FC-detail-link-button {
   width: 173px;
   height: 51px;
   display: flex;
@@ -192,7 +194,7 @@
   line-height: 160%; /* 25.6px */
 }
 
-.freelancer-right {
+.FC-freelancer-right {
   display: flex;
   margin-left: auto;
   flex-direction: column;
@@ -200,12 +202,12 @@
   flex-shrink: 0;
 }
 
-.freelancer-metrics {
+.FC-freelancer-metrics {
   display: flex;
   gap: 20px;
 }
 
-.main_metric {
+.FC-main_metric {
   display: flex;
   width: 128px;
   height: 128px;
@@ -217,7 +219,7 @@
   background: var(--orange-400, #fd8b3e);
 }
 
-.metric {
+.FC-metric {
   display: flex;
   width: 128px;
   height: 128px;
@@ -229,7 +231,7 @@
   background: var(--grayscale-gray200, #f4efec);
 }
 
-.main_metric-label {
+.FC-main_metric-label {
   color: var(--maincolor-white, #fff);
 
   /* title/medium/Medium */
@@ -240,7 +242,7 @@
   line-height: normal;
 }
 
-.main_metric-value {
+.FC-main_metric-value {
   color: var(--maincolor-white, #fff);
 
   /* title/bold/Medium */
@@ -251,7 +253,7 @@
   line-height: normal;
 }
 
-.metric-label {
+.FC-metric-label {
   color: var(--maincolor-white, #131115);
 
   /* title/medium/Medium */
@@ -262,7 +264,7 @@
   line-height: normal;
 }
 
-.metric-value {
+.FC-metric-value {
   color: var(--maincolor-black, #131115);
 
   /* title/bold/Medium */
@@ -273,7 +275,7 @@
   line-height: normal;
 }
 
-.freelancer-skills-container {
+.FC-freelancer-skills-container {
   box-sizing: border-box;
   width: 100%;
   min-height: 230px;
@@ -283,7 +285,7 @@
   background: var(--maincolor-white, #fff);
 }
 
-.skills-background {
+.FC-skills-background {
   padding: 24px;
   min-height: 198px;
   align-self: stretch;
@@ -296,7 +298,7 @@
   border-radius: 16px;
   border: var(--sds-size-stroke-border) solid var(--grayscale-gray200, #f4efec);
 }
-.skills-background h4 {
+.FC-skills-background h4 {
   margin: 0;
   color: var(--maincolor-black, #131115);
   padding-bottom: 20px;
@@ -308,13 +310,13 @@
   line-height: normal;
 }
 
-.skill-list {
+.FC-skill-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.skill-item {
+.FC-skill-item {
   display: inline-flex;
   height: 20px;
   width: auto;
@@ -335,6 +337,6 @@
   line-height: normal;
 }
 
-.skill-item p {
+.FC-skill-item p {
   margin: 0;
 }

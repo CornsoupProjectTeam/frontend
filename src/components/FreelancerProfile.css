@@ -1,0 +1,132 @@
+/* src/components/Freelancerprofile.css */
+
+.freelancer-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Space-200, 8px);
+}
+
+.FP-profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.FP-freelancer-info {
+  display: flex;
+  padding: var(--Space-200, 8px) 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+}
+
+.FP-freelancer-info-nameId {
+  display: flex;
+  align-items: center;
+  gap: var(--Space-300, 12px);
+}
+
+.FP-freelancer-info-work {
+  display: flex;
+  align-items: center;
+  gap: var(--Space-300, 12px);
+}
+
+.FP-freelancer-name {
+  padding: 0;
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
+
+  /* title/bold/Large */
+  font-family: "Pretendard";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.FP-freelancer-userId {
+  color: var(--grayscale-alpha-500, rgba(19, 17, 21, 0.5));
+
+  /* body/medium/Medium */
+  font-family: "Pretendard";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.FP-freelancer-stats {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+
+  color: var(--orange-600, #e67f3a);
+
+  /* body/medium/Medium */
+  font-family: "Pretendard";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.FP-freelancer-tags {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+}
+
+.FP-weekend-work-tag {
+  display: flex;
+  height: 18px;
+  width: 86px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  border-radius: var(--Radius-100, 4px);
+  border: 1.34px solid var(--purple-500, #c97ccb);
+  background: var(--purple-100, #f6e6f6);
+
+  color: var(--purple-500, #c97ccb);
+  /* body/bold/Small */
+  font-family: "Pretendard";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.FP-freelancer-badge {
+  display: flex;
+  height: var(--Icon-Medium, 32px);
+  padding: 6px var(--Space-200, 8px);
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  padding: 0;
+}
+
+.FP-pretest-score-tag {
+  display: flex;
+  height: 18px;
+  width: 86px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  border-radius: var(--Radius-100, 4px);
+  border: 1.34px solid var(--green-500, #52d47e);
+  background: var(--green-100, #ddf8e6);
+
+  color: var(--green-500, #52d47e);
+
+  /* body/bold/Small */
+  font-family: "Pretendard";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

@@ -1,0 +1,86 @@
+/* src/pages/Freelancer/DetailFreelancer.css */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+.detail-freelancer-page {
+  font-family: "Pretendard", sans-serif;
+  padding: 60px;
+  width: 1320px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.freelancer-profile-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.chat-button {
+  background-color: #333;
+  color: white;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.freelancer-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.tab-button {
+  background: #f5f5f5;
+  padding: 12px 36px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: black;
+}
+
+.tab-button.active {
+  background-color: #eee;
+}
+
+.freelancer-details-section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.freelancer-introduction-section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.freelancer-introduction-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.request-button-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.request-button {
+  background-color: #333;
+  color: white;
+  padding: 16px 36px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}

@@ -1,3 +1,7 @@
+/* src/pages/Freelancer/ExploreFreelancer.css */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
 .freelancer-explore-page {
   font-family: "Pretendard", sans-serif;
   padding: 60px;
