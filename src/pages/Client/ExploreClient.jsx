@@ -112,13 +112,20 @@ const filterOptions = [
   {
     label: "희망 제작 마감일",
     options: [
-      { label: "골드 등급 전문가" },
-      { label: "실버 등급 전문가" },
-      { label: "브론즈 등급 전문가" },
+      { label: "전체 기간", icon: null },
+      { label: "6개월 이내", icon: null },
+      { label: "3개월 이내", icon: null },
+      { label: "1개월 이내", icon: null },
+      { label: "2주 이내", icon: null },
+      { label: "1주 이내", icon: null },
     ],
   },
+  {
+    label: "의뢰 분야",
+    options: [{ label: "전체 분야" }, { label: "로고" }, { label: "썸네일" }],
+  },
 ];
-const sortOptions = ["최신순", "인기순", "추천순"];
+const sortOptions = ["신규등록순", "마감기한순", "추천순"];
 
 const ExploreClient = () => {
   const [clientsData] = useState(exampleClients);
@@ -177,25 +184,6 @@ const ExploreClient = () => {
       </div>
 
       <div className="EC-main-content">
-        {/* 사이드바 */}
-        <aside className="EC-sidebar">
-          <div className="EC-category">
-            <h3>디자인</h3>
-            <ul>
-              <li
-                className={selectedCategory === "썸네일" ? "active" : ""}
-                onClick={() => handleCategoryClick("썸네일")}>
-                썸네일
-              </li>
-              <li
-                className={selectedCategory === "로고" ? "active" : ""}
-                onClick={() => handleCategoryClick("로고")}>
-                로고
-              </li>
-            </ul>
-          </div>
-        </aside>
-
         {/* 클라이언트 리스트 */}
         <div className="EC-client-list">
           {currentClients.map((client) => (

@@ -7,7 +7,7 @@ import "./LanguageSelector.css";
 /* assets */
 import CaretDown from "../../assets/icons/CaretDown.svg";
 import CaretUp from "../../assets/icons/CaretUp.svg";
-import Globe from "../../assets/icons/MainHeader_Globe.svg";
+import Globe from "../../assets/icons/MH_Globe.svg";
 
 const LanguageSelector = () => {
   // 드롭다운 상태

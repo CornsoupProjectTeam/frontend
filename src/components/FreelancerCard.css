@@ -1,0 +1,340 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+.freelancer-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--Icon-Large, 40px);
+  border-radius: 16px;
+  border: var(--sds-size-stroke-border) solid var(--grayscale-gray200, #f4efec);
+  background: var(--maincolor-white, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.freelancer-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+}
+
+.freelancer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.freelancer-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Space-200, 8px);
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.freelancer-info {
+  display: flex;
+  padding: var(--Space-200, 8px) 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+}
+
+.freelancer-info-nameId {
+  display: flex;
+  align-items: center;
+  gap: var(--Space-300, 12px);
+}
+
+.freelancer-info-work {
+  display: flex;
+  align-items: center;
+  gap: var(--Space-300, 12px);
+}
+
+.freelancer-name {
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
+
+  /* title/bold/Large */
+  font-family: "Pretendard";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.freelancer-userId {
+  color: var(--grayscale-alpha-500, rgba(19, 17, 21, 0.5));
+
+  /* body/medium/Medium */
+  font-family: "Pretendard";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.freelancer-stats {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+
+  color: var(--orange-600, #e67f3a);
+
+  /* body/medium/Medium */
+  font-family: "Pretendard";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.freelancer-tags {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+}
+
+.weekend-work-tag {
+  display: flex;
+  height: 18px;
+  width: 86px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  border-radius: var(--Radius-100, 4px);
+  border: 1.34px solid var(--purple-500, #c97ccb);
+  background: var(--purple-100, #f6e6f6);
+
+  color: var(--purple-500, #c97ccb);
+  /* body/bold/Small */
+  font-family: "Pretendard";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.freelancer-badge {
+  display: flex;
+  height: var(--Icon-Medium, 32px);
+  padding: 6px var(--Space-200, 8px);
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  padding: 0;
+}
+
+.pretest-score-tag {
+  display: flex;
+  height: 18px;
+  width: 86px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  border-radius: var(--Radius-100, 4px);
+  border: 1.34px solid var(--green-500, #52d47e);
+  background: var(--green-100, #ddf8e6);
+
+  color: var(--green-500, #52d47e);
+
+  /* body/bold/Small */
+  font-family: "Pretendard";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.freelancer-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+}
+
+.freelancer-actions img {
+  width: 51px;
+  height: 51px;
+}
+
+.detail-link-button {
+  width: 173px;
+  height: 51px;
+  display: flex;
+  padding: 20px 36px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+
+  border-radius: 30px;
+  background: var(--grayscale-alpha-800, rgba(19, 17, 21, 0.8));
+
+  color: var(--maincolor-white, #fff);
+  text-align: center;
+
+  /* body/bold/Large - prominent */
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
+
+.freelancer-right {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.freelancer-metrics {
+  display: flex;
+  gap: 20px;
+}
+
+.main_metric {
+  display: flex;
+  width: 128px;
+  height: 128px;
+  padding: var(--Space-400, 16px);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 16px;
+  background: var(--orange-400, #fd8b3e);
+}
+
+.metric {
+  display: flex;
+  width: 128px;
+  height: 128px;
+  padding: var(--Space-400, 16px);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 16px;
+  background: var(--grayscale-gray200, #f4efec);
+}
+
+.main_metric-label {
+  color: var(--maincolor-white, #fff);
+
+  /* title/medium/Medium */
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.main_metric-value {
+  color: var(--maincolor-white, #fff);
+
+  /* title/bold/Medium */
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.metric-label {
+  color: var(--maincolor-white, #131115);
+
+  /* title/medium/Medium */
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.metric-value {
+  color: var(--maincolor-black, #131115);
+
+  /* title/bold/Medium */
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.freelancer-skills-container {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 230px;
+  padding: var(--Space-400, 16px);
+  border-radius: 16px;
+  border: 2px solid var(--grayscale-gray200, #f4efec);
+  background: var(--maincolor-white, #fff);
+}
+
+.skills-background {
+  padding: 24px;
+  min-height: 198px;
+  align-self: stretch;
+
+  background-image: url("../assets/images/FC_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 16px;
+  border: var(--sds-size-stroke-border) solid var(--grayscale-gray200, #f4efec);
+}
+.skills-background h4 {
+  margin: 0;
+  color: var(--maincolor-black, #131115);
+  padding-bottom: 20px;
+  /* title/medium/Medium */
+  font-family: "Pretendard";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-item {
+  display: inline-flex;
+  height: 20px;
+  width: auto;
+  padding: 6px var(--Space-200, 8px);
+  align-items: center;
+  gap: var(--Space-100, 4px);
+
+  border-radius: var(--Radius-100, 4px);
+  border: 1.34px solid var(--orange-500, #f1853c);
+  background: var(--orange-100, #ffe8d8);
+
+  color: var(--orange-500, #f1853c);
+  /* body/bold/Small */
+  font-family: "Pretendard";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.skill-item p {
+  margin: 0;
+}

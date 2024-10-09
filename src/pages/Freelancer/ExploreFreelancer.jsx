@@ -9,6 +9,12 @@ import FilterDropdown from "../../components/drop-down/SearchFilter";
 import SortDropdown from "../../components/drop-down/Sort";
 import FreelancerCard from "../../components/FreelancerCard"; // 프리랜서 카드 컴포넌트
 
+/* assets */
+import GoldBadge from "../../assets/icons/GoldWombat.svg";
+import SilverBadge from "../../assets/icons/SilverWombat.svg";
+import BronzeBadge from "../../assets/icons/BronzeWombat.svg";
+import BlackBadge from "../../assets/icons/BlackWombat.svg";
+
 /* 샘플 데이터 */
 import sampleProfile from "../../assets/images/image 30.png"; // 샘플 프로필 이미지
 
@@ -16,58 +22,92 @@ const exampleFreelancers = [
   {
     id: 1,
     name: "로고 그려주는 형님",
-    username: "drawingbro",
+    userId: "drawingbro",
+    responseTime: 90,
+    matchCount: 7,
     rating: 4.5,
-    reviewCount: 100,
-    matchRate: 7,
-    skillSet: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
+    weekendAvailable: true,
+    badge: "gold",
+    preTestScore: 80,
+    field: "logo",
+    skills: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
     profileImage: sampleProfile,
+    averageProductionTime: 7.5,
   },
   {
     id: 2,
-    name: "로고 그려주는 형님",
-    username: "drawingbro",
-    rating: 4.4,
-    reviewCount: 150,
-    matchRate: 5,
-    skillSet: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
+    name: "썸네일 디자이너",
+    userId: "thumbnailmaster",
+    responseTime: 120,
+    matchCount: 5,
+    rating: 4.3,
+    weekendAvailable: false,
+    badge: "silver",
+    preTestScore: 85,
+    field: "thumbnail",
+    skills: ["Sketch", "Adobe XD", "Figma"],
     profileImage: sampleProfile,
+    averageProductionTime: 5.5,
   },
   {
     id: 3,
-    name: "로고 그려주는 형님",
-    username: "drawingbro",
-    rating: 4.4,
-    reviewCount: 150,
-    matchRate: 0,
-    skillSet: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
+    name: "브랜드 디자이너",
+    userId: "brandpro",
+    responseTime: 80,
+    matchCount: 10,
+    rating: 4.7,
+    weekendAvailable: true,
+    badge: "bronze",
+    preTestScore: 90,
+    field: "logo",
+    skills: ["Figma", "InDesign", "CorelDRAW"],
     profileImage: sampleProfile,
+    averageProductionTime: 6.7,
   },
-  // 더 많은 샘플 데이터 추가 가능
 ];
 
 const ITEMS_PER_PAGE = 5;
 
 const filterOptions = [
   {
-    label: "가격대",
+    label: "희망 금액 단위",
     options: [
       { label: "전체 금액", icon: null },
       { label: "100만원 이하", icon: null },
       { label: "70만원 이하", icon: null },
       { label: "50만원 이하", icon: null },
+      { label: "30만원 이하", icon: null },
+      { label: "10만원 이하", icon: null },
     ],
   },
   {
-    label: "기간",
+    label: "전문 분야",
     options: [
-      { label: "6개월 이내", icon: null },
-      { label: "12개월 이내", icon: null },
+      { label: "전체 분야" },
+      { label: "로고", icon: null },
+      { label: "썸네일", icon: null },
+    ],
+  },
+  {
+    label: "서비스 옵션",
+    options: [
+      { label: "전체 옵션" },
+      { label: "주말 작업 가능", icon: null },
+      { label: "주말 상담 가능", icon: null },
+    ],
+  },
+  {
+    label: "전문가 뱃지",
+    options: [
+      { label: "전체 등급", icon: BlackBadge },
+      { label: "골드 등급 전문가", icon: GoldBadge },
+      { label: "실버 등급 전문가", icon: SilverBadge },
+      { label: "브론즈 등급 전문가", icon: BronzeBadge },
     ],
   },
 ];
 
-const sortOptions = ["최신순", "인기순", "추천순"];
+const sortOptions = ["신규가입순", "평점순", "응답순", "추천순"];
 
 const ExploreFreelancer = () => {
   const [freelancersData] = useState(exampleFreelancers);
@@ -128,23 +168,6 @@ const ExploreFreelancer = () => {
 
       <div className="EF-main-content">
         {/* 사이드바 */}
-        <aside className="EF-sidebar">
-          <div className="EF-category">
-            <h3>디자인</h3>
-            <ul>
-              <li
-                className={selectedCategory === "썸네일" ? "active" : ""}
-                onClick={() => handleCategoryClick("썸네일")}>
-                썸네일
-              </li>
-              <li
-                className={selectedCategory === "로고" ? "active" : ""}
-                onClick={() => handleCategoryClick("로고")}>
-                로고
-              </li>
-            </ul>
-          </div>
-        </aside>
 
         {/* 프리랜서 리스트 */}
         <div className="EF-freelancer-list">

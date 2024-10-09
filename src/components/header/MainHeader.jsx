@@ -7,10 +7,10 @@ import "./MainHeader.css";
 
 /* assets */
 import newLogo from "../../assets/images/logo_black.svg";
-import MagnifyingGlass from "../../assets/icons/MainHeader_MagnifyingGlass.svg";
-import Menu from "../../assets/icons/MainHeader_Menu.svg";
-import Chat from "../../assets/icons/MainHeader_Chat.svg";
-import Close from "../../assets/icons/MainHeader_Close.svg";
+import MagnifyingGlass from "../../assets/icons/MH_MagnifyingGlass.svg";
+import Menu from "../../assets/icons/MH_Menu.svg";
+import Chat from "../../assets/icons/MH_Chat.svg";
+import Close from "../../assets/icons/MH_Close.svg";
 
 /* components */
 import LanguageSelector from "../drop-down/LanguageSelector";

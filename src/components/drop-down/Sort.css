@@ -56,7 +56,7 @@
 
 .sort-column {
   display: flex;
-  width: 95px;
+  width: 120px;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--Space-100, 4px);
