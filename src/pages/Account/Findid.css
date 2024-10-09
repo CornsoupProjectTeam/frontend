@@ -1,0 +1,79 @@
+.findid-container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: #fbfaf9;
+    padding: 40px;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.logo-image {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.slogan {
+    font-size: 18px;
+    color: #6c6c6c;
+    margin-bottom: 20px;
+}
+
+.right-side-email {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 자식 요소들을 가운데 정렬 */
+    justify-content: center; /* 수직 정렬 추가 */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 575px;
+    position: absolute;
+    left: 424px;
+    right: 64px;
+    max-width: calc(100% - 488px);
+    text-align: center; /* 내부 텍스트들 가운데 정렬 */
+    margin-top: 70px;
+}
+
+.right-side-email h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: left; /* h2는 왼쪽 정렬 */
+    align-self: flex-start; /* h2만 왼쪽으로 정렬되도록 */
+    width: 100%; /* h2 너비를 100%로 설정 */
+    margin-top: 56px;
+}
+
+.mail-image {
+    margin-top: 56px;
+}
+
+.right-side-email p {
+    font-size: 16px;
+    color: #6A6666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login-button {
+    width: 177px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 860px;
+    margin-bottom: 20px;
+    margin-top: 150px;
+}
