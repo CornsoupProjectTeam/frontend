@@ -10,6 +10,8 @@ import Signup from "./pages/LoginSignup/Signup";
 import SignupEmail from "./pages/LoginSignup/SignupEmail";
 import ExploreClient from "./pages/Client/ExploreClient";
 import DetailClient from "./pages/Client/DetailClient";
+import ExploreProject from "./pages/Project/ExploreProject";
+import ExploreFreelancer from "./pages/Freelancer/ExploreFreelancer";
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
             path="/explore-client/details/:client_post_id"
             element={<DetailClient />}
           />
+          <Route path="/explore-project" element={<ExploreProject />} />
+          <Route path="/explore-freelancer" element={<ExploreFreelancer />} />
         </Routes>
         <Footer />
       </Router>

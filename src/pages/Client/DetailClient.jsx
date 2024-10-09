@@ -96,37 +96,37 @@ const DetailClient = () => {
   }
 
   return (
-    <div className="client-detail-page">
-      <div className="client-detail-card">
-        <div className="client-detail-header">
+    <div className="detail-client-page">
+      <div className="DC-client-detail-card">
+        <div className="DC-client-detail-header">
           <img src={LeftBtn} alt="뒤로가기" onClick={() => navigate(-1)} />
           <h1>{clientData.title}</h1>
         </div>
-        <div className="client-detail-content">
-          <div className="client-description">
-            <div className="client-profile">
+        <div className="DC-client-detail-content">
+          <div className="DC-client-description">
+            <div className="DC-client-profile">
               <img src={clientData.profileImage} alt="프로필" />
-              <div className="client-info">
+              <div className="DC-client-info">
                 <h3>{clientData.nickname}</h3>
                 <p>@{clientData.userId}</p>
               </div>
             </div>
-            <div className="client-badges">
-              <span className="client-days-left">{clientData.daysLeft}</span>
-              <span className="client-budget">{clientData.budget}</span>
+            <div className="DC-client-badges">
+              <span className="DC-client-days-left">{clientData.daysLeft}</span>
+              <span className="DC-client-budget">{clientData.budget}</span>
             </div>
-            <div className="client-details-content">
-              <form className="details-container">
+            <div className="DC-client-details-content">
+              <form className="DC-details-container">
                 <h4>
                   희망 예산 : {clientData.budgetRange[0]}만원 ~{" "}
                   {clientData.budgetRange[1]}만원
                 </h4>
               </form>
-              <form className="details-container">
+              <form className="DC-details-container">
                 <h4>모집 기간</h4>
-                <form className="details-section">
+                <form className="DC-details-section">
                   <h4>의뢰 모집 마감일</h4>
-                  <p className="date-display">
+                  <p className="DC-date-display">
                     {clientData.deadline
                       ? clientData.deadline.toLocaleDateString("ko-KR", {
                           year: "numeric",
@@ -137,11 +137,11 @@ const DetailClient = () => {
                   </p>
                 </form>
               </form>
-              <form className="details-container">
+              <form className="DC-details-container">
                 <h4>제작 기간</h4>
-                <form className="details-section">
+                <form className="DC-details-section">
                   <h4>희망 제작 마감일</h4>
-                  <p className="date-display">
+                  <p className="DC-date-display">
                     {clientData.projectEnd
                       ? clientData.projectEnd.toLocaleDateString("ko-KR", {
                           year: "numeric",
@@ -152,19 +152,19 @@ const DetailClient = () => {
                   </p>
                 </form>
               </form>
-              <form className="details-container">
+              <form className="DC-details-container">
                 <h4>원하는 디자인 작업물</h4>
-                <form className="details-section">
+                <form className="DC-details-section">
                   <h4>의뢰 요구사항</h4>
                   {clientData.tags.map((tag, index) => (
                     <p key={index}>{tag}</p>
                   ))}
                 </form>
 
-                <form className="details-section">
+                <form className="DC-details-section">
                   <h4>프로젝트를 표현할 수 있는 이미지</h4>
                   {clientData.images.length > 0 ? (
-                    <div className="image-list">
+                    <div className="DC-image-list">
                       {clientData.images.map((image, index) => (
                         <img
                           key={index}
@@ -184,13 +184,13 @@ const DetailClient = () => {
         </div>
       </div>
 
-      <div className="other-projects-section">
+      <div className="DC-other-projects-section">
         <h2>다른 의뢰글 더 보기</h2>
-        <div className="scroll-buttons-container">
-          <button onClick={scrollLeft} className="scroll-left">
+        <div className="DC-scroll-buttons-container">
+          <button onClick={scrollLeft} className="DC-scroll-left">
             <img src={LeftBtn} alt="Scroll Left" />
           </button>
-          <div className="other-projects" ref={otherProjectsRef}>
+          <div className="DC-other-projects" ref={otherProjectsRef}>
             <img src={sampleProject} alt="Sample Project" />
             <img src={sampleProject} alt="Sample Project" />
             <img src={sampleProject} alt="Sample Project" />
@@ -206,7 +206,7 @@ const DetailClient = () => {
             <img src={sampleProject} alt="Sample Project" />
             <img src={sampleProject} alt="Sample Project" />
           </div>
-          <button onClick={scrollRight} className="scroll-right">
+          <button onClick={scrollRight} className="DC-scroll-right">
             <img src={RightBtn} alt="Scroll Right" />
           </button>
         </div>
@@ -214,11 +214,11 @@ const DetailClient = () => {
 
       {/* 이미지 확대 시 배경과 함께 보이기 */}
       {selectedImage && (
-        <div className="image-modal-overlay" onClick={closeImageView}>
+        <div className="DC-image-modal-overlay" onClick={closeImageView}>
           <img
             src={selectedImage}
             alt="확대된 이미지"
-            className="image-modal-content"
+            className="DC-image-modal-content"
           />
         </div>
       )}

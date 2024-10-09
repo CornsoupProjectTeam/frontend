@@ -7,7 +7,7 @@ import "./ExploreClient.css";
 import Pagination from "../../components/Pagination";
 import FilterDropdown from "../../components/drop-down/SearchFilter";
 import SortDropdown from "../../components/drop-down/Sort";
-import RegisterProject from "./RegisterClient";
+import RegisterClient from "./RegisterClient";
 import ClientCard from "../../components/ClientCard";
 
 /* assets */
@@ -154,13 +154,13 @@ const ExploreClient = () => {
   return (
     <div className="client-explore-page">
       {/* 페이지 헤더 */}
-      <div className="page-header">
-        <div className="page-header-title">
+      <div className="EC-page-header">
+        <div className="EC-page-header-title">
           <h1>클라이언트 찾기</h1>
-          <RegisterProject />
+          <RegisterClient />
         </div>
         {/* 필터와 정렬 드롭다운 */}
-        <div className="page-header-filter">
+        <div className="EC-page-header-filter">
           {/* 필터 */}
           <FilterDropdown
             title="검색 필터"
@@ -176,10 +176,10 @@ const ExploreClient = () => {
         </div>
       </div>
 
-      <div className="main-content">
+      <div className="EC-main-content">
         {/* 사이드바 */}
-        <aside className="sidebar">
-          <div className="category">
+        <aside className="EC-sidebar">
+          <div className="EC-category">
             <h3>디자인</h3>
             <ul>
               <li
@@ -197,14 +197,14 @@ const ExploreClient = () => {
         </aside>
 
         {/* 클라이언트 리스트 */}
-        <div className="client-list">
+        <div className="EC-client-list">
           {currentClients.map((client) => (
             <ClientCard key={client.id} {...client} />
           ))}
         </div>
       </div>
       {/* 페이지네이션 */}
-      <div className="pagination-container">
+      <div className="EC-pagination-container">
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}

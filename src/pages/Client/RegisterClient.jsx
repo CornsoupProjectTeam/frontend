@@ -11,7 +11,7 @@ import Modal from "../../components/popup/Modal";
 import ImageUpload from "../../components/form/ImageUpload";
 import TagInput from "../../components/form/TagInput";
 
-const RegisterProject = () => {
+const RegisterClient = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [values, setValues] = useState([10, 200]);
 
@@ -34,24 +34,24 @@ const RegisterProject = () => {
   const userId = 123; // 샘플 사용자 ID
 
   return (
-    <div className="register-project-page">
-      <button className="register-project-button" onClick={openModal}>
+    <div className="register-client-page">
+      <button className="RC-register-client-button" onClick={openModal}>
         의뢰글 등록하기
       </button>
 
       {/* 모달 */}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <div className="register-project-modal-content">
+        <div className="RC-register-client-modal-content">
           <h2>의뢰글 등록하기</h2>
 
           {/* 필수 정보 섹션 */}
-          <section className="form-section">
+          <section className="RC-form-section">
             <h3>기본 정보</h3>
             <label>제목*</label>
             <input type="text" placeholder="제목을 입력하세요..." />
           </section>
 
-          <section className="form-section">
+          <section className="RC-form-section">
             <label>
               희망 예산*: {values[0]}만원 ~ {values[1]}만원
             </label>
@@ -99,21 +99,21 @@ const RegisterProject = () => {
           </section>
 
           {/* 모집 기간 */}
-          <section className="form-section">
+          <section className="RC-form-section">
             <h3>모집 기간</h3>
             <label>의뢰 모집 마감일*</label>
             <CustomDatePicker />
           </section>
 
           {/* 제작 기간 */}
-          <section className="form-section">
+          <section className="RC-form-section">
             <h3>제작 기간</h3>
             <label>희망 제작 마감일*</label>
             <CustomDatePicker />
           </section>
 
           {/* 디자인 작업물 */}
-          <section className="form-section">
+          <section className="RC-form-section">
             <h3>원하는 디자인 작업물</h3>
             <label>의뢰 요구사항*</label>
             <TagInput />
@@ -121,8 +121,8 @@ const RegisterProject = () => {
             <ImageUpload userId={userId} />
           </section>
           {/* 하단 등록 버튼 */}
-          <section className="project-submit-area">
-            <button className="project-submit-button" onClick={handleSubmit}>
+          <section className="RC-client-submit-area">
+            <button className="RC-client-submit-button" onClick={handleSubmit}>
               등록하기
             </button>
           </section>
@@ -132,4 +132,4 @@ const RegisterProject = () => {
   );
 };
 
-export default RegisterProject;
+export default RegisterClient;
