@@ -54,7 +54,8 @@ body.modal-open {
   align-items: flex-start;
   gap: 56px;
   align-self: stretch;
-  width: 90%; /* 반응형 너비 */
+
+  box-sizing: border-box;
   max-height: 80vh; /* 화면 80% 높이까지만 */
   background-color: white;
   border-radius: 8px;
