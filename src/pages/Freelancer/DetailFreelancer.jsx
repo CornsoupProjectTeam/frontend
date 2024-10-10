@@ -223,7 +223,7 @@ const DetailFreelancer = () => {
           {["자기소개", "포트폴리오", "리뷰"].map((tab) => (
             <button
               key={tab}
-              className={`tab-button ${activeTab === tab ? "active" : ""}`}
+              className={`DF-tab-button ${activeTab === tab ? "active" : ""}`}
               onClick={() => setActiveTab(tab)}>
               {tab}
             </button>
