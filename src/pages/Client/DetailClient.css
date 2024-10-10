@@ -123,6 +123,50 @@ p {
   gap: var(--Space-300, 12px);
 }
 
+.DC-client-days-left {
+  display: flex;
+  height: var(--Icon-Medium, 18px);
+  padding: 6px var(--Space-200, 8px);
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--Radius-100, 4px);
+  border: 1.5px solid var(--violet-500, #c99eec);
+  background: var(--violet-100, #f6edfd);
+
+  color: var(--violet-500, #c99eec);
+
+  /* body/bold/Small */
+  font-family: "Pretendard";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.DC-client-budget {
+  display: flex;
+  height: var(--Icon-Medium, 18px);
+  padding: 6px var(--Space-200, 8px);
+  align-items: center;
+  gap: var(--Space-100, 4px);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--Radius-100, 4px);
+  border: 1.5px solid var(--yellow-500, #dbda4f);
+  background: var(--yellow-100, #fafadc);
+
+  color: var(--yellow-600, #d0d04c);
+
+  /* body/bold/Small */
+  font-family: "Pretendard";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .DC-client-details-content {
   margin-top: 20px;
 }

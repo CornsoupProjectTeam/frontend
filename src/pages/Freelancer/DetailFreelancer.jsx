@@ -38,8 +38,8 @@ const DetailFreelancer = () => {
   // 샘플 데이터
   const profileData = {
     profileImage: samplerProfileImg,
-    name: "로고 그려주는 형님",
-    userId: "drawingbro",
+    name: "로고 그려주는 언니",
+    userId: "drawingsister",
     responseTime: 90,
     matchCount: 7,
     rating: 4.4,
@@ -55,7 +55,16 @@ const DetailFreelancer = () => {
     field: "logo",
     responseTime: 90,
     averageProductionTime: 7.5,
-    skills: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
+    skills: [
+      "Figma",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe XD",
+      "Procreate",
+      "Clip Studio Paint",
+      "CorelDRAW",
+      "Inkscape",
+    ],
   };
   const reviewsData = [
     {
