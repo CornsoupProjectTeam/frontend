@@ -193,11 +193,13 @@ const ExploreClient = () => {
       </div>
       {/* 페이지네이션 */}
       <div className="EC-pagination-container">
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
+        {totalPages > 1 && (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+        )}
       </div>
     </div>
   );

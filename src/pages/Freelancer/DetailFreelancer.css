@@ -3,84 +3,387 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 .detail-freelancer-page {
-  font-family: "Pretendard", sans-serif;
   padding: 60px;
   width: 1320px;
   margin: 0 auto;
-  overflow-x: hidden;
-}
-
-.freelancer-profile-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
 }
 
-.chat-button {
-  background-color: #333;
-  color: white;
-  border-radius: 30px;
-  padding: 12px 24px;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
+.detail-freelancer-page .freelancer-profile {
+  display: flex;
+  width: 100%;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  box-sizing: border-box;
+
+  border-radius: 16px;
+  border: var(--sds-size-stroke-border) solid var(--grayscale-gray200, #f4efec);
+  background: var(--maincolor-white, #fff);
+
+  /* 컨테이너 */
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.detail-freelancer-page .FP-freelancer-info {
+  gap: 16px;
+}
+.detail-freelancer-page .FP-freelancer-tags {
+  margin-top: 8px;
 }
 
 .freelancer-tabs {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 24px;
-  padding: 24px 0;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.tab-wrapper {
+  display: flex;
+  width: fit-content;
+  padding: 20px 36px;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+
+  border-radius: 100px;
+  background: #fff;
+
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
 .tab-button {
-  background: #f5f5f5;
-  padding: 12px 36px;
+  display: flex;
+  width: 101px;
+  padding: var(--Space-400, 16px) 20px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+
   border-radius: 30px;
-  border: none;
+  background: var(--maincolor-white, #fff);
   cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  color: var(--maincolor-black, #131115);
+  text-align: center;
+
+  /* body/bold/Medium */
+  font-family: "Pretendard";
+  font-size: 14px;
+  font-style: normal;
   font-weight: 700;
-  color: black;
+  line-height: normal;
 }
 
 .tab-button.active {
-  background-color: #eee;
+  border-radius: 30px;
+  background: var(--grayscale-gray200, #f4efec);
 }
 
-.freelancer-details-section {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+.tab-button:hover {
+  background-color: #f4efec;
 }
 
 .freelancer-introduction-section {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
-}
-
-.freelancer-introduction-section p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.request-button-section {
+  width: 1240px;
   display: flex;
-  justify-content: flex-end;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: var(--maincolor-white, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
-.request-button {
-  background-color: #333;
-  color: white;
-  padding: 16px 36px;
+.freelancer-introduction-section .freelancer-details {
+  display: flex;
+  align-items: flex-start; /* 왼쪽 정렬 */
+  justify-content: space-between; /* 아이템들 사이에 균등한 공간 */
+  gap: 20px;
+  width: 100%; /* 너비를 꽉 채움 */
+}
+
+.freelancer-introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  align-self: stretch;
+}
+
+.freelancer-introduction h2 {
+  display: flex;
+  padding: var(--Space-400, 16px) var(--Space-100, 4px) var(--Space-400, 16px)
+    0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--blue-900, #1b1e33);
+
+  /* title/bold/Large */
+  font-family: "Pretendard";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.freelancer-introduction-text {
+  white-space: pre-line;
+  align-self: stretch;
+  color: var(--maincolor-black, #131115);
+
+  /* body/medium/Large */
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.freelancer-line {
+  margin-bottom: 12px; /* 줄 간격 설정 */
+  white-space: pre-line;
+}
+
+.freelancer-portfolio-section {
+  display: flex;
+  padding-bottom: 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.portfolio-intro {
+  display: flex;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-200, 8px);
+  align-self: stretch;
+
+  border-radius: 16px;
+  background: var(--maincolor-white, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+/* 포트폴리오 그리드 스타일 */
+.freelancer-portfolio-section .portfolio-grid {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px var(--Space-400, 16px);
+  flex-wrap: wrap;
+}
+
+.freelancer-portfolio-section .portfolio-grid img {
+  width: 426px;
+  height: 240px;
+  flex-shrink: 0;
+  background: lightgray 50% / cover no-repeat;
+  border-radius: 8px;
+}
+
+.freelancer-review-section {
+  width: 1240px;
+  display: flex;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: var(--maincolor-white, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.freelancer-review-section .review-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.review-header button {
+  display: flex;
+  padding: 20px 36px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  gap: var(--Space-200, 8px);
+
   border-radius: 30px;
+  background: var(--grayscale-alpha-800, rgba(19, 17, 21, 0.8));
+
+  color: var(--maincolor-white, #fff);
+  text-align: center;
+
+  /* body/bold/Large - prominent */
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
+
+.review-item {
+  display: flex;
+  width: 320px;
+  padding: var(--Icon-Medium, 32px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+
+  border-radius: 16px;
+  border: 1px solid var(--grayscale-gray300, #f1eae6);
+  background: #fff;
+
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.review-item h3 {
+  margin: 0;
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
+
+  /* title/bold/Large */
+  font-family: "Pretendard";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.review-item p {
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
+
+  /* title/medium/Small */
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+
+.review-author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+}
+
+.review-author-image img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Space-300, 8px);
+}
+
+.review-author-info .authorId {
+  color: var(--grayscale-alpha-500, rgba(19, 17, 21, 0.5));
+
+  /* body/medium/Large */
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.review-author-info .authorName {
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
+
+  /* title/medium/Small */
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+
+.no-review {
+  display: flex;
+  padding: 30px 95px;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  align-self: stretch;
+}
+
+.no-review p {
+  color: var(--grayscale-gray800, #aca5a3);
+  text-align: center;
+
+  /* title/medium/Small */
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+
+.review-button {
+  padding: 12px 20px;
+  background-color: #ff6600;
+  color: white;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
-  font-weight: 700;
+  margin-top: 20px;
+}
+
+.freelancer-review-section .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+  align-self: stretch;
+}
+
+.freelancer-introduction-section .FD-freelancer-metrics {
+  width: 900px;
+}
+
+.freelancer-introduction-section .FD-main_metric {
+  width: 210px;
+  height: 210px;
+  border-radius: 16px;
+  background: var(--maincolor-black, #131115);
+}
+
+.freelancer-introduction-section .FD-metric {
+  width: 210px;
+  height: 210px;
+}
+
+.freelancer-introduction-section .FD-freelancer-skills-container {
+  width: 900px;
+  background-size: contain;
+}
+
+.freelancer-introduction-section .FD-skills-background {
+  width: 60%;
 }
