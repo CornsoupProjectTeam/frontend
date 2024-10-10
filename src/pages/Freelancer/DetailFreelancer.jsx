@@ -124,13 +124,13 @@ const DetailFreelancer = () => {
     switch (activeTab) {
       case "자기소개":
         return (
-          <section className="freelancer-introduction-section">
+          <section className="DF-freelancer-introduction-section">
             <FreelancerDetails {...detailsData} />
-            <div className="freelancer-introduction">
+            <div className="DF-freelancer-introduction">
               <h2>프리랜서 자기소개</h2>
-              <div className="freelancer-introduction-text">
+              <div className="DF-freelancer-introduction-text">
                 {profileData.introductionText.split("\n").map((line, index) => (
-                  <p key={index} className="freelancer-line">
+                  <p key={index} className="DF-freelancer-line">
                     {line}
                   </p>
                 ))}
@@ -140,12 +140,12 @@ const DetailFreelancer = () => {
         );
       case "포트폴리오":
         return (
-          <section className="freelancer-portfolio-section">
-            <div className="portfolio-intro">
+          <section className="DF-freelancer-portfolio-section">
+            <div className="DF-portfolio-intro">
               <h2>포트폴리오</h2>
               <p>잇칭에 공개한 포트폴리오를 구경해보세요.</p>
             </div>
-            <div className="portfolio-grid">
+            <div className="DF-portfolio-grid">
               <img src={samplerPortfolioImg} alt="포트폴리오1" />
               <img src={samplerPortfolioImg} alt="포트폴리오2" />
               <img src={samplerPortfolioImg} alt="포트폴리오3" />
@@ -159,31 +159,33 @@ const DetailFreelancer = () => {
         );
       case "리뷰":
         return (
-          <section className="freelancer-review-section">
-            <div className="review-header">
+          <section className="DF-freelancer-review-section">
+            <div className="DF-review-header">
               <h2>프리랜서 리뷰</h2>
-              <button className="review-button">리뷰 남기기</button>
+              <button className="DF-review-button">리뷰 남기기</button>
             </div>
             {reviewsData.length === 0 ? (
-              <div className="no-review">
+              <div className="DF-no-review">
                 <img src={review_emptyview} alt="리뷰 없음" />
                 <p>아직 리뷰가 없어요.</p>
               </div>
             ) : (
-              <div className="review-wrapper">
-                <div className="review-list">
+              <div className="DF-review-wrapper">
+                <div className="DF-review-list">
                   {paginatedReviews.map((review, index) => (
-                    <div key={index} className="review-item">
+                    <div key={index} className="DF-review-item">
                       <h3>{review.title}</h3>
                       <p>{review.content}</p>
-                      <div className="review-meta">
-                        <div className="review-author">
-                          <div className="review-author-image">
+                      <div className="DF-review-meta">
+                        <div className="DF-review-author">
+                          <div className="DF-review-author-image">
                             <img src={samplerProfileImg} alt="리뷰 작성자" />
                           </div>
-                          <div className="review-author-info">
-                            <span className="authorId">{review.authorId}</span>
-                            <span className="authorName">
+                          <div className="DF-review-author-info">
+                            <span className="DF-authorId">
+                              {review.authorId}
+                            </span>
+                            <span className="DF-authorName">
                               {review.authorName}
                             </span>
                           </div>
@@ -216,8 +218,8 @@ const DetailFreelancer = () => {
       <FreelancerProfile {...profileData} />
 
       {/* 탭 섹션 */}
-      <section className="freelancer-tabs">
-        <div className="tab-wrapper">
+      <section className="DF-freelancer-tabs">
+        <div className="DF-tab-wrapper">
           {["자기소개", "포트폴리오", "리뷰"].map((tab) => (
             <button
               key={tab}
@@ -229,7 +231,7 @@ const DetailFreelancer = () => {
         </div>
       </section>
 
-      <section className="freelancer-tab-contents">
+      <section className="DF-freelancer-tab-contents">
         {/* 조건부로 변경되는 내용 */}
         {renderTabContent()}
       </section>

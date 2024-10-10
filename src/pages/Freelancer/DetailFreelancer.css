@@ -12,7 +12,7 @@
   gap: 24px;
 }
 
-.detail-freelancer-page .freelancer-profile {
+.detail-freelancer-page .DF-freelancer-profile {
   display: flex;
   width: 100%;
   padding: var(--Icon-Large, 40px);
@@ -36,7 +36,7 @@
   margin-top: 8px;
 }
 
-.freelancer-tabs {
+.DF-freelancer-tabs {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,7 +45,7 @@
   align-self: stretch;
 }
 
-.tab-wrapper {
+.DF-tab-wrapper {
   display: flex;
   width: fit-content;
   padding: 20px 36px;
@@ -58,7 +58,7 @@
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
-.tab-button {
+.DF-tab-button {
   display: flex;
   width: 101px;
   padding: var(--Space-400, 16px) 20px;
@@ -82,16 +82,16 @@
   line-height: normal;
 }
 
-.tab-button.active {
+.DF-tab-button.active {
   border-radius: 30px;
   background: var(--grayscale-gray200, #f4efec);
 }
 
-.tab-button:hover {
+.DF-tab-button:hover {
   background-color: #f4efec;
 }
 
-.freelancer-introduction-section {
+.DF-freelancer-introduction-section {
   width: 1240px;
   display: flex;
   padding: var(--Icon-Large, 40px);
@@ -104,7 +104,7 @@
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
-.freelancer-introduction-section .freelancer-details {
+.DF-freelancer-introduction-section .DF-freelancer-details {
   display: flex;
   align-items: flex-start; /* 왼쪽 정렬 */
   justify-content: space-between; /* 아이템들 사이에 균등한 공간 */
@@ -112,7 +112,7 @@
   width: 100%; /* 너비를 꽉 채움 */
 }
 
-.freelancer-introduction {
+.DF-freelancer-introduction {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -120,7 +120,7 @@
   align-self: stretch;
 }
 
-.freelancer-introduction h2 {
+.DF-freelancer-introduction h2 {
   display: flex;
   padding: var(--Space-400, 16px) var(--Space-100, 4px) var(--Space-400, 16px)
     0px;
@@ -138,7 +138,7 @@
   line-height: normal;
 }
 
-.freelancer-introduction-text {
+.DF-freelancer-introduction-text {
   white-space: pre-line;
   align-self: stretch;
   color: var(--maincolor-black, #131115);
@@ -151,12 +151,12 @@
   line-height: normal;
 }
 
-.freelancer-line {
+.DF-freelancer-line {
   margin-bottom: 12px; /* 줄 간격 설정 */
   white-space: pre-line;
 }
 
-.freelancer-portfolio-section {
+.DF-freelancer-portfolio-section {
   display: flex;
   padding-bottom: 80px;
   flex-direction: column;
@@ -164,7 +164,7 @@
   gap: 24px;
 }
 
-.portfolio-intro {
+.DF-portfolio-intro {
   display: flex;
   padding: var(--Icon-Large, 40px);
   flex-direction: column;
@@ -178,7 +178,7 @@
 }
 
 /* 포트폴리오 그리드 스타일 */
-.freelancer-portfolio-section .portfolio-grid {
+.DF-freelancer-portfolio-section .DF-portfolio-grid {
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
@@ -186,7 +186,7 @@
   flex-wrap: wrap;
 }
 
-.freelancer-portfolio-section .portfolio-grid img {
+.DF-freelancer-portfolio-section .DF-portfolio-grid img {
   width: 426px;
   height: 240px;
   flex-shrink: 0;
@@ -194,7 +194,7 @@
   border-radius: 8px;
 }
 
-.freelancer-review-section {
+.DF-freelancer-review-section {
   width: 1240px;
   display: flex;
   padding: var(--Icon-Large, 40px);
@@ -207,20 +207,20 @@
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
-.freelancer-review-section .review-list {
+.DF-freelancer-review-section .DF-review-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.review-header {
+.DF-review-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
 }
 
-.review-header button {
+.DF-review-header button {
   display: flex;
   padding: 20px 36px;
   justify-content: center;
@@ -242,7 +242,7 @@
   line-height: 160%; /* 25.6px */
 }
 
-.review-item {
+.DF-review-item {
   display: flex;
   width: 320px;
   padding: var(--Icon-Medium, 32px);
@@ -257,7 +257,7 @@
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
-.review-item h3 {
+.DF-review-item h3 {
   margin: 0;
   color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
 
@@ -269,7 +269,7 @@
   line-height: normal;
 }
 
-.review-item p {
+.DF-review-item p {
   color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
 
   /* title/medium/Small */
@@ -280,21 +280,21 @@
   line-height: 28px; /* 155.556% */
 }
 
-.review-author {
+.DF-review-author {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--Space-200, 8px);
 }
 
-.review-author-image img {
+.DF-review-author-image img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.review-author-info {
+.DF-review-author-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -302,7 +302,7 @@
   gap: var(--Space-300, 8px);
 }
 
-.review-author-info .authorId {
+.DF-review-author-info .authorId {
   color: var(--grayscale-alpha-500, rgba(19, 17, 21, 0.5));
 
   /* body/medium/Large */
@@ -313,7 +313,7 @@
   line-height: normal;
 }
 
-.review-author-info .authorName {
+.DF-review-author-info .authorName {
   color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
 
   /* title/medium/Small */
@@ -324,7 +324,7 @@
   line-height: 28px; /* 155.556% */
 }
 
-.no-review {
+.DF-o-review {
   display: flex;
   padding: 30px 95px;
   flex-direction: column;
@@ -333,7 +333,7 @@
   align-self: stretch;
 }
 
-.no-review p {
+.DF-no-review p {
   color: var(--grayscale-gray800, #aca5a3);
   text-align: center;
 
@@ -345,7 +345,7 @@
   line-height: 28px; /* 155.556% */
 }
 
-.review-button {
+.DF-review-button {
   padding: 12px 20px;
   background-color: #ff6600;
   color: white;
@@ -355,7 +355,7 @@
   margin-top: 20px;
 }
 
-.freelancer-review-section .pagination {
+.DF-freelancer-review-section .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,27 +363,27 @@
   align-self: stretch;
 }
 
-.freelancer-introduction-section .FD-freelancer-metrics {
+.DF-freelancer-introduction-section .FD-freelancer-metrics {
   width: 900px;
 }
 
-.freelancer-introduction-section .FD-main_metric {
+.DF-freelancer-introduction-section .FD-main_metric {
   width: 210px;
   height: 210px;
   border-radius: 16px;
   background: var(--maincolor-black, #131115);
 }
 
-.freelancer-introduction-section .FD-metric {
+.DF-freelancer-introduction-section .FD-metric {
   width: 210px;
   height: 210px;
 }
 
-.freelancer-introduction-section .FD-freelancer-skills-container {
+.DF-freelancer-introduction-section .FD-freelancer-skills-container {
   width: 900px;
   background-size: contain;
 }
 
-.freelancer-introduction-section .FD-skills-background {
+.DF-freelancer-introduction-section .FD-skills-background {
   width: 60%;
 }

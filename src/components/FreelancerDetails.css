@@ -37,6 +37,15 @@
   background: var(--grayscale-gray200, #f4efec);
 }
 
+.FD-metric img {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 13px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
 .FD-main_metric-label {
   color: var(--maincolor-white, #fff);
 
