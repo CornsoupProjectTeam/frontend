@@ -14,6 +14,9 @@ import Findid from "./pages/Account/Findid";
 import Findpw from "./pages/Account/Findpw";
 import ExploreClient from "./pages/Client/ExploreClient";
 import DetailClient from "./pages/Client/DetailClient";
+import AccountInfo from "./pages/Profile/AccountInfo";
+import FreelancerInfo from "./pages/Profile/FreelancerInfo";
+import FreelancerRegister from "./pages/Profile/FreelancerRegister";
 
 const App = () => {
   return (
@@ -32,7 +35,11 @@ const App = () => {
           <Route
             path="/explore-client/details/:client_post_id"
             element={<DetailClient />}
+            
           />
+          <Route path="/account-info" element={<AccountInfo />} />
+          <Route path="/freelancer-info" element={<FreelancerInfo />} />
+          <Route path="/freelancer-register" element={<FreelancerRegister />} />
         </Routes>
         <Footer />
       </Router>

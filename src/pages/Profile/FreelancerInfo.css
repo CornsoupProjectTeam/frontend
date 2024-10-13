@@ -1,0 +1,211 @@
+/* 전체 컨테이너 */
+.freeInfo-info-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fbfaf9;
+    padding: 40px;
+    height: 1150px;
+}
+
+.freeInfo-left-side {
+    width: 100%; /* 기본적으로 너비를 100%로 설정하여 부모 요소를 꽉 채움 */
+    max-width: 100px; /* 최대 너비를 256px로 설정 */
+    min-width: 200px; /* 최소 너비를 200px로 설정하여 너무 작아지지 않도록 */
+    max-height: 800px;
+    min-height: 600px; /* 너무 작아지지 않도록 최소 높이 설정 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* 사이즈가 변동되지 않도록 설정 */
+    margin-left: 20px;
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+/* 화면이 더 작은 경우에 대한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .freeInfo-left-side {
+        width: 100%; /* 작은 화면에서는 너비를 100%로 설정하여 가로 공간을 모두 사용 */
+        max-width: none; /* 최대 너비 제한을 없앰 */
+        height: auto; /* 고정된 높이를 제거하여 유동적으로 조정 */
+    }
+}
+
+.freeInfo-divider {
+    width: 140%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 10px 0;
+}
+
+.freeInfo-info {
+    margin-bottom: 10px;
+}
+
+.freeInfo-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.freeInfo-role {
+    font-size: 18px;
+    color: #F1853C;
+}
+
+.freeInfo-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.freeInfo-status {
+    font-size: 15px; /* 텍스트 크기를 줄임 */
+    color: #6A6666;
+    display: flex;
+}
+
+.freeInfo-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.freeInfo-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: #6A6666;
+}
+
+.freeInfo-menu-item img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* 선택된 항목에 대한 스타일 */
+.freeInfo-menu-item.selected {
+    background-color: #F1ECEB; /* 선택된 항목의 배경색 */
+    color: #F1853C; /* 선택된 항목의 텍스트 색상 */
+    font-weight: bold; /* 선택된 항목은 굵게 표시 */
+    width: 140%;
+  }
+  
+.freeInfo-menu-item:hover {
+    background-color: #F1ECEB; /* 마우스를 올릴 때의 배경색 */
+    color: #F1853C; /* 마우스를 올릴 때 텍스트 색상 */
+    width: 140%;
+}
+
+.freeInfo-logout-button {
+    margin-top: auto;
+    padding: 10px 20px;
+    color: #DC9BDD;
+    background-color: transparent; /* 배경색 투명으로 설정 */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+}
+
+.freeInfo-logout-button img {
+    width: 16px;
+    margin-right: 8px;
+}
+
+/* 오른쪽 컨테이너 */
+.freeInfo-right-side {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬 */
+    justify-content: flex-start; /* 상단부터 배치 */
+    gap: 50px; /* 프리랜서 정보와 리뷰 사이의 간격을 추가 */
+    max-height: 600px;
+}
+
+.freeInfo-right-side h2 {
+    text-align: left; /* 프리랜서 정보 제목 왼쪽 정렬 */
+    width: 100%; /* 제목이 섹션의 전체 너비를 차지하도록 설정 */
+}
+
+.freeInfo-review-container h2 {
+    text-align: left; /* 프리랜서 리뷰 제목 왼쪽 정렬 */
+    width: 100%; /* 제목이 섹션의 전체 너비를 차지하도록 설정 */
+}
+
+/* 빈 화면 아이콘과 텍스트 */
+.freeInfo-empty-view {
+    text-align: center;
+}
+
+.freeInfo-empty-icon {
+    width: 300px;
+    height: 218px;
+    margin-bottom: 20px;
+}
+
+.freeInfo-empty-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6A6666;
+    margin-bottom: 10px;
+}
+
+.freeInfo-empty-subtext {
+    font-size: 18px;
+    color: #6A6666;
+    margin-bottom: 20px;
+}
+
+.freeInfo-register-button {
+    background-color: #131115CC;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+/* 프리랜서 리뷰 */
+.freeInfo-review-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬 */
+    margin-top: 140px; /* 프리랜서 정보와 프리랜서 리뷰 사이의 마진 */
+}
+
+.freeInfo-review-empty-text {
+    font-size: 18px;
+    color: #6A6666;
+    margin-top: 20px;
+}
+
+/* 모바일 화면에 대한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .freeInfo-left-side {
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+
+    .freeInfo-right-side {
+        margin-left: 0;
+    }
+}

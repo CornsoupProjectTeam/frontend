@@ -23,7 +23,7 @@ function LoginSignup() {
   };
 
   const handleForgotPasswordClick = () => {
-    navigate("/accountfind"); // AccountFind 페이지로 이동
+    navigate("/findaccount"); // AccountFind 페이지로 이동
   };
 
   return (
