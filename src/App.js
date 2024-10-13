@@ -16,6 +16,9 @@ import ExploreClient from "./pages/Client/ExploreClient";
 import DetailClient from "./pages/Client/DetailClient";
 import ExploreFreelancer from "./pages/Freelancer/ExploreFreelancer";
 import DetailFreelancer from "./pages/Freelancer/DetailFreelancer";
+import AccountInfo from "./pages/Profile/AccountInfo";
+import FreelancerInfo from "./pages/Profile/FreelancerInfo";
+import FreelancerRegister from "./pages/Profile/FreelancerRegister";
 
 const App = () => {
   return (
@@ -34,12 +37,16 @@ const App = () => {
           <Route
             path="/explore-client/details/:client_post_id"
             element={<DetailClient />}
+            
           />
           <Route path="/explore-freelancer" element={<ExploreFreelancer />} />
           <Route
             path="/profile/freelancer/:freelancer_user_id/details"
             element={<DetailFreelancer />}
           />
+          <Route path="/account-info" element={<AccountInfo />} />
+          <Route path="/freelancer-info" element={<FreelancerInfo />} />
+          <Route path="/freelancer-register" element={<FreelancerRegister />} />
         </Routes>
         <Footer />
       </Router>

@@ -1,0 +1,13 @@
+<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="FolderPlus" clip-path="url(#clip0_1658_4233)">
+<path id="Vector" d="M27.1112 26.5H4.9225C4.67804 26.4993 4.44378 26.4019 4.27092 26.2291C4.09806 26.0562 4.00066 25.822 4 25.5775V10.5H27C27.2652 10.5 27.5196 10.6054 27.7071 10.7929C27.8946 10.9804 28 11.2348 28 11.5V25.6112C28 25.847 27.9064 26.073 27.7397 26.2397C27.573 26.4064 27.347 26.5 27.1112 26.5Z" stroke="#F1853C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M4 10.5V7.5C4 7.23478 4.10536 6.98043 4.29289 6.79289C4.48043 6.60536 4.73478 6.5 5 6.5H11.5863C11.8511 6.50012 12.1051 6.60532 12.2925 6.7925L16 10.5" stroke="#F1853C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M13 18.5H19" stroke="#F1853C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M16 15.5V21.5" stroke="#F1853C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1658_4233">
+<rect width="32" height="32" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg>

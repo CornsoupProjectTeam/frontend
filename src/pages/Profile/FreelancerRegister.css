@@ -1,0 +1,418 @@
+/* 전체 컨테이너 */
+.freeregis-info-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fbfaf9;
+    padding: 40px;
+}
+
+.freeregis-left-side {
+    width: 100%; /* 기본적으로 너비를 100%로 설정하여 부모 요소를 꽉 채움 */
+    max-width: 100px; /* 최대 너비를 256px로 설정 */
+    min-width: 200px; /* 최소 너비를 200px로 설정하여 너무 작아지지 않도록 */
+    max-height: 800px;
+    min-height: 600px; /* 너무 작아지지 않도록 최소 높이 설정 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* 사이즈가 변동되지 않도록 설정 */
+    margin-left: 20px;
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+/* 화면이 더 작은 경우에 대한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .freeregis-left-side {
+        width: 100%; /* 작은 화면에서는 너비를 100%로 설정하여 가로 공간을 모두 사용 */
+        max-width: none; /* 최대 너비 제한을 없앰 */
+        height: auto; /* 고정된 높이를 제거하여 유동적으로 조정 */
+    }
+}
+
+.freeregis-divider {
+    width: 140%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 10px 0;
+}
+
+.freeregis-info {
+    margin-bottom: 10px;
+}
+
+.freeregis-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.freeregis-role {
+    font-size: 18px;
+    color: #F1853C;
+}
+
+.freeregis-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.freeregis-status {
+    font-size: 15px; /* 텍스트 크기를 줄임 */
+    color: #6A6666;
+    display: flex;
+}
+
+.freeregis-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.freeregis-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: #6A6666;
+}
+
+.freeregis-menu-item img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* 선택된 항목에 대한 스타일 */
+.freeregis-menu-item.selected {
+    background-color: #F1ECEB; /* 선택된 항목의 배경색 */
+    color: #F1853C; /* 선택된 항목의 텍스트 색상 */
+    font-weight: bold; /* 선택된 항목은 굵게 표시 */
+    width: 140%;
+}
+
+.freeregis-menu-item:hover {
+    background-color: #F1ECEB; /* 마우스를 올릴 때의 배경색 */
+    color: #F1853C; /* 마우스를 올릴 때 텍스트 색상 */
+    width: 140%;
+}
+
+.freeregis-logout-button {
+    margin-top: auto;
+    padding: 10px 20px;
+    color: #DC9BDD;
+    background-color: transparent; /* 배경색 투명으로 설정 */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+}
+
+.freeregis-logout-button img {
+    width: 16px;
+    margin-right: 8px;
+}
+
+/* 전체 컨테이너 */
+.freeregis-info-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fbfaf9;
+    padding: 40px;
+}
+
+/* 왼쪽 네비게이션 영역 */
+.freeregis-left-side {
+    width: 250px; /* 왼쪽 네비게이션 너비 */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.freeregis-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.freeregis-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.freeregis-role {
+    font-size: 18px;
+    color: #F1853C;
+}
+
+.freeregis-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.freeregis-status {
+    font-size: 15px;
+    color: #6A6666;
+    margin-top: 5px;
+}
+
+.freeregis-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.freeregis-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: #6A6666;
+}
+
+.freeregis-menu-item.selected {
+    background-color: #F1ECEB;
+    color: #F1853C;
+    font-weight: bold;
+}
+
+.freeregis-menu-item img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* 로그아웃 버튼 */
+.freeregis-logout-button {
+    margin-top: auto;
+    padding: 10px 20px;
+    color: #DC9BDD;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.freeregis-logout-button img {
+    width: 16px;
+    margin-right: 8px;
+}
+
+/* 오른쪽 폼 영역 */
+.freeregis-right-side {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 40px;
+    margin-left: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.freeregis-right-side h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 이미지 업로드 */
+.freeregis-image-upload {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.freeregis-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.freeregis-image-placeholder {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #F1ECEB;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #F1853C; /* 텍스트와 SVG 색상 */
+    background-color: transparent; /* 배경 투명하게 설정 */
+    position: relative;
+}
+
+.freeregis-camera-button {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    background-color: #FD8B3E;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.freeregis-camera-button img {
+    width: 20px;
+}
+
+.freeregis-textarea, 
+.freeregis-input[type="text"], 
+.freeregis-input[type="email"], 
+.freeregis-input[type="password"] {
+    width: 40%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* 등록 버튼 및 변경 버튼 */
+.freeregis-edit-button {
+    background-color: #F1853C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.freeregis-edit-button:hover, .freeregis-save-button:hover {
+    background-color: #d07431;
+}
+
+.freeregis-save-button {
+    background-color: #ACA5A3;
+    border: #000000;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+/* Select 스타일링 */
+.freeregis-react-select__control {
+    margin-bottom: 20px;
+}
+
+.freeregis-react-select__menu {
+    margin-top: 0;
+}
+
+/* 포트폴리오 등록 박스 */
+.freeregis-portfolio-upload-box {
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
+    border: 2px dashed #F1853C; /* 테두리를 더 두껍게 */
+    background-color: #FFF6F0; /* 배경을 더 부드럽게 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 호버 시 애니메이션 추가 */
+}
+
+.freeregis-portfolio-upload-box:hover {
+    background-color: #FFECE0; /* 호버 시 배경색 변경 */
+}
+
+.freeregis-portfolio-upload-icon {
+    font-size: 36px;
+    color: #F1853C; /* 아이콘 색상 */
+    margin-bottom: 10px;
+}
+
+.freeregis-portfolio-upload-text {
+    font-size: 16px;
+    color: #F1853C;
+    font-weight: bold;
+}
+
+.freeregis-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.freeregis-popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.freeregis-popup h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.freeregis-popup input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.freeregis-popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.freeregis-add-education-button {
+    margin-left: 10px;
+}
+
+.freeregis-popup-close-button, .freeregis-popup-add-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.freeregis-popup-close-button {
+    background-color: #f1f1f1;
+}
+
+.freeregis-popup-add-button {
+    background-color: #F1853C;
+    color: white;
+}
+
+.freeregis-popup-close-button:hover, .freeregis-popup-add-button:hover {
+    opacity: 0.8;
+}
