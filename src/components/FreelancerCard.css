@@ -1,0 +1,73 @@
+/* src/components/FreelancerCard.css */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+.freelancer-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--Icon-Large, 40px);
+  border-radius: 16px;
+  border: var(--sds-size-stroke-border) solid var(--grayscale-gray200, #f4efec);
+  background: var(--maincolor-white, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.FC-freelancer-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+}
+
+.FC-freelancer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.FC-freelancer-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+}
+
+.FC-freelancer-actions img {
+  width: 51px;
+  height: 51px;
+}
+
+.FC-detail-link-button {
+  width: 173px;
+  height: 51px;
+  display: flex;
+  padding: 20px 36px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+
+  border-radius: 30px;
+  background: var(--grayscale-alpha-800, rgba(19, 17, 21, 0.8));
+
+  color: var(--maincolor-white, #fff);
+  text-align: center;
+
+  /* body/bold/Large - prominent */
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
+
+.FC-freelancer-right {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+}

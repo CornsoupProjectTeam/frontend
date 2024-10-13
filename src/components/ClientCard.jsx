@@ -8,7 +8,7 @@ import "./ClientCard.css";
 /* assets */
 import favoriteOff from "../assets/icons/favoriteOff.svg";
 import favoriteOn from "../assets/icons/favoriteOn.svg";
-import detailBtn from "../assets/icons/ExploreProject_detailBtn.svg";
+import detailBtn from "../assets/icons/EP_detailBtn.svg";
 
 const ClientCard = ({
   id,
@@ -29,19 +29,23 @@ const ClientCard = ({
   return (
     <div className="client-card">
       {/* 클라이언트 카드의 메인 콘텐츠 */}
-      <h2 className="client-card-title">{title}</h2>
-      <div className="client-card-content">
-        <div className="client-card-header">
-          <div className="user-info-container">
-            <img src={profileImage} alt="프로필 이미지" className="user-img" />
-            <div className="user-info">
-              <div className="user-details">
-                <p className="nickname">{nickname}</p>
-                <p className="user-id">@{userId}</p>
+      <h2 className="CC-client-card-title">{title}</h2>
+      <div className="CC-client-card-content">
+        <div className="CC-client-card-header">
+          <div className="CC-user-info-container">
+            <img
+              src={profileImage}
+              alt="프로필 이미지"
+              className="CC-user-img"
+            />
+            <div className="CC-user-info">
+              <div className="CC-user-details">
+                <p className="CC-nickname">{nickname}</p>
+                <p className="CC-user-id">@{userId}</p>
               </div>
             </div>
           </div>
-          <div className="client-card-buttons">
+          <div className="CC-client-card-buttons">
             {/* 찜하기 버튼 */}
             <img
               src={isFavorited ? favoriteOn : favoriteOff} // 상태에 따라 아이콘 변경
@@ -57,9 +61,9 @@ const ClientCard = ({
           </div>
         </div>
         {/* 기간 및 예산 정보 */}
-        <div className="client-card-tags">
-          <span className="client-days-left">{daysLeft}</span>
-          <span className="client-budget">{budget}</span>
+        <div className="CC-client-card-tags">
+          <span className="CC-client-days-left">{daysLeft}</span>
+          <span className="CC-client-budget">{budget}</span>
         </div>
       </div>
     </div>

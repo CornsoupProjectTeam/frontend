@@ -43,7 +43,7 @@ const SortDropdown = ({ sortOptions, sortCriteria, onSortChange }) => {
       {/* 정렬 버튼 */}
       <button className="sort-dropdown" onClick={toggleSortDropdown}>
         <img src={SortIcon} alt="정렬" />
-        <span className="selectSort">{sortCriteria}</span>
+        <p className="selectSort">{sortCriteria}</p>
         <img id="Caret" src={isSortOpen ? CaretUp : CaretDown} alt="Caret" />
       </button>
 

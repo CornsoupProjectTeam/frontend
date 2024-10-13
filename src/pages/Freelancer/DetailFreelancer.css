@@ -1,0 +1,389 @@
+/* src/pages/Freelancer/DetailFreelancer.css */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+.detail-freelancer-page {
+  padding: 60px;
+  width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.detail-freelancer-page .freelancer-profile {
+  display: flex;
+  width: 100%;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  box-sizing: border-box;
+
+  border-radius: 16px;
+  border: var(--sds-size-stroke-border) solid var(--grayscale-gray200, #f4efec);
+  background: var(--maincolor-white, #fff);
+
+  /* 컨테이너 */
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.detail-freelancer-page .FP-freelancer-info {
+  gap: 16px;
+}
+.detail-freelancer-page .FP-freelancer-tags {
+  margin-top: 8px;
+}
+
+.DF-freelancer-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.DF-tab-wrapper {
+  display: flex;
+  width: fit-content;
+  padding: 20px 36px;
+  align-items: flex-start;
+  gap: var(--Space-300, 12px);
+
+  border-radius: 100px;
+  background: #fff;
+
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.DF-tab-button {
+  display: flex;
+  width: 101px;
+  padding: var(--Space-400, 16px) 20px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+
+  border-radius: 30px;
+  background: var(--maincolor-white, #fff);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  color: var(--maincolor-black, #131115);
+  text-align: center;
+
+  /* body/bold/Medium */
+  font-family: "Pretendard";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.DF-tab-button.active {
+  border-radius: 30px;
+  background: var(--grayscale-gray200, #f4efec);
+}
+
+.DF-tab-button:hover {
+  background-color: #f4efec;
+}
+
+.DF-freelancer-introduction-section {
+  width: 1240px;
+  display: flex;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: var(--maincolor-white, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.DF-freelancer-introduction-section .freelancer-details {
+  display: flex;
+  align-items: flex-start; /* 왼쪽 정렬 */
+  justify-content: space-between; /* 아이템들 사이에 균등한 공간 */
+  gap: 20px;
+  width: 100%; /* 너비를 꽉 채움 */
+}
+
+.DF-freelancer-introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  align-self: stretch;
+}
+
+.DF-freelancer-introduction h2 {
+  display: flex;
+  padding: var(--Space-400, 16px) var(--Space-100, 4px) var(--Space-400, 16px)
+    0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--blue-900, #1b1e33);
+
+  /* title/bold/Large */
+  font-family: "Pretendard";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.DF-freelancer-introduction-text {
+  white-space: pre-line;
+  align-self: stretch;
+  color: var(--maincolor-black, #131115);
+
+  /* body/medium/Large */
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.DF-freelancer-line {
+  margin-bottom: 12px; /* 줄 간격 설정 */
+  white-space: pre-line;
+}
+
+.DF-freelancer-portfolio-section {
+  display: flex;
+  padding-bottom: 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.DF-portfolio-intro {
+  display: flex;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-200, 8px);
+  align-self: stretch;
+
+  border-radius: 16px;
+  background: var(--maincolor-white, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+/* 포트폴리오 그리드 스타일 */
+.DF-freelancer-portfolio-section .DF-portfolio-grid {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px var(--Space-400, 16px);
+  flex-wrap: wrap;
+}
+
+.DF-freelancer-portfolio-section .DF-portfolio-grid img {
+  width: 426px;
+  height: 240px;
+  flex-shrink: 0;
+  background: lightgray 50% / cover no-repeat;
+  border-radius: 8px;
+}
+
+.DF-freelancer-review-section {
+  width: 1240px;
+  display: flex;
+  padding: var(--Icon-Large, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: var(--maincolor-white, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.DF-freelancer-review-section .DF-review-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.DF-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.DF-review-header button {
+  display: flex;
+  padding: 20px 36px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  gap: var(--Space-200, 8px);
+
+  border-radius: 30px;
+  background: var(--grayscale-alpha-800, rgba(19, 17, 21, 0.8));
+
+  color: var(--maincolor-white, #fff);
+  text-align: center;
+
+  /* body/bold/Large - prominent */
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
+
+.DF-review-item {
+  display: flex;
+  width: 320px;
+  padding: var(--Icon-Medium, 32px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+
+  border-radius: 16px;
+  border: 1px solid var(--grayscale-gray300, #f1eae6);
+  background: #fff;
+
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.DF-review-item h3 {
+  margin: 0;
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
+
+  /* title/bold/Large */
+  font-family: "Pretendard";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.DF-review-item p {
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
+
+  /* title/medium/Small */
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+
+.DF-review-author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+}
+
+.DF-review-author-image img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.DF-review-author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Space-300, 8px);
+}
+
+.DF-review-author-info .authorId {
+  color: var(--grayscale-alpha-500, rgba(19, 17, 21, 0.5));
+
+  /* body/medium/Large */
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.DF-review-author-info .authorName {
+  color: var(--grayscale-alpha-900, rgba(19, 17, 21, 0.9));
+
+  /* title/medium/Small */
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+
+.DF-o-review {
+  display: flex;
+  padding: 30px 95px;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  align-self: stretch;
+}
+
+.DF-no-review p {
+  color: var(--grayscale-gray800, #aca5a3);
+  text-align: center;
+
+  /* title/medium/Small */
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+
+.DF-review-button {
+  padding: 12px 20px;
+  background-color: #ff6600;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.DF-freelancer-review-section .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+  align-self: stretch;
+}
+
+.DF-freelancer-introduction-section .FD-freelancer-metrics {
+  width: 900px;
+}
+
+.DF-freelancer-introduction-section .FD-main_metric {
+  width: 210px;
+  height: 210px;
+  border-radius: 16px;
+  background: var(--maincolor-black, #131115);
+}
+
+.DF-freelancer-introduction-section .FD-metric {
+  width: 210px;
+  height: 210px;
+}
+
+.DF-freelancer-introduction-section .FD-freelancer-skills-container {
+  width: 900px;
+  background-size: contain;
+}
+
+.DF-freelancer-introduction-section .FD-skills-background {
+  width: 60%;
+}

@@ -7,7 +7,7 @@ import "./ExploreClient.css";
 import Pagination from "../../components/Pagination";
 import FilterDropdown from "../../components/drop-down/SearchFilter";
 import SortDropdown from "../../components/drop-down/Sort";
-import RegisterProject from "./RegisterClient";
+import RegisterClient from "./RegisterClient";
 import ClientCard from "../../components/ClientCard";
 
 /* assets */
@@ -112,13 +112,20 @@ const filterOptions = [
   {
     label: "희망 제작 마감일",
     options: [
-      { label: "골드 등급 전문가" },
-      { label: "실버 등급 전문가" },
-      { label: "브론즈 등급 전문가" },
+      { label: "전체 기간", icon: null },
+      { label: "6개월 이내", icon: null },
+      { label: "3개월 이내", icon: null },
+      { label: "1개월 이내", icon: null },
+      { label: "2주 이내", icon: null },
+      { label: "1주 이내", icon: null },
     ],
   },
+  {
+    label: "의뢰 분야",
+    options: [{ label: "전체 분야" }, { label: "로고" }, { label: "썸네일" }],
+  },
 ];
-const sortOptions = ["최신순", "인기순", "추천순"];
+const sortOptions = ["신규등록순", "마감기한순", "추천순"];
 
 const ExploreClient = () => {
   const [clientsData] = useState(exampleClients);
@@ -154,13 +161,13 @@ const ExploreClient = () => {
   return (
     <div className="client-explore-page">
       {/* 페이지 헤더 */}
-      <div className="page-header">
-        <div className="page-header-title">
+      <div className="EC-page-header">
+        <div className="EC-page-header-title">
           <h1>클라이언트 찾기</h1>
-          <RegisterProject />
+          <RegisterClient />
         </div>
         {/* 필터와 정렬 드롭다운 */}
-        <div className="page-header-filter">
+        <div className="EC-page-header-filter">
           {/* 필터 */}
           <FilterDropdown
             title="검색 필터"
@@ -176,40 +183,23 @@ const ExploreClient = () => {
         </div>
       </div>
 
-      <div className="main-content">
-        {/* 사이드바 */}
-        <aside className="sidebar">
-          <div className="category">
-            <h3>디자인</h3>
-            <ul>
-              <li
-                className={selectedCategory === "썸네일" ? "active" : ""}
-                onClick={() => handleCategoryClick("썸네일")}>
-                썸네일
-              </li>
-              <li
-                className={selectedCategory === "로고" ? "active" : ""}
-                onClick={() => handleCategoryClick("로고")}>
-                로고
-              </li>
-            </ul>
-          </div>
-        </aside>
-
+      <div className="EC-main-content">
         {/* 클라이언트 리스트 */}
-        <div className="client-list">
+        <div className="EC-client-list">
           {currentClients.map((client) => (
             <ClientCard key={client.id} {...client} />
           ))}
         </div>
       </div>
       {/* 페이지네이션 */}
-      <div className="pagination-container">
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
+      <div className="EC-pagination-container">
+        {totalPages > 1 && (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+        )}
       </div>
     </div>
   );

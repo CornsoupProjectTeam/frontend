@@ -8,12 +8,12 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.register-project-page {
+.register-client-page {
   padding: 0 !important;
   z-index: 10000;
 }
 
-.register-project-button {
+.RC-register-client-button {
   display: flex;
   height: 50px;
   padding: 20px 36px;
@@ -37,7 +37,7 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 160%;
 }
 
-.register-project-button:hover {
+.RC-register-client-button:hover {
   background-color: #ff6600;
 }
 
@@ -47,14 +47,15 @@ body.modal-open {
 }
 
 /* 모달 전체 스타일 */
-.register-project-modal-content {
+.RC-register-client-modal-content {
   display: flex;
   padding: var(--Icon-Large, 40px);
   flex-direction: column;
   align-items: flex-start;
   gap: 56px;
   align-self: stretch;
-  width: 90%; /* 반응형 너비 */
+
+  box-sizing: border-box;
   max-height: 80vh; /* 화면 80% 높이까지만 */
   background-color: white;
   border-radius: 8px;
@@ -78,7 +79,7 @@ h2 {
 }
 
 /* 폼 섹션 */
-.form-section {
+.RC-form-section {
   display: flex;
   width: 100%;
   height: auto;
@@ -87,7 +88,7 @@ h2 {
   gap: 36px;
 }
 
-.form-section h3 {
+.RC-form-section h3 {
   margin: 0;
   color: var(--blue-900, #1b1e33);
   font-family: "Pretendard";
@@ -97,7 +98,7 @@ h2 {
   line-height: normal;
 }
 
-.form-section label {
+.RC-form-section label {
   color: var(--grayscale-gray900, #6a6666);
   font-family: "Pretendard";
   font-size: 18px;
@@ -106,7 +107,7 @@ h2 {
   line-height: normal;
 }
 
-.form-section input[type="date"] {
+.RC-form-section input[type="date"] {
   width: 100%;
   box-sizing: border-box;
   height: var(--Icon-Large, 40px);
@@ -123,10 +124,10 @@ h2 {
   line-height: normal;
 }
 
-.form-section input[type="text"],
-.form-section input[type="file"],
-.form-section textarea,
-.form-section select {
+.RC-form-section input[type="text"],
+.RC-form-section input[type="file"],
+.RC-form-section textarea,
+.RC-form-section select {
   display: flex;
   padding: 14px var(--Space-400, 16px);
   align-items: center;
@@ -185,7 +186,7 @@ textarea {
   background: #f07a26;
 }
 
-.project-submit-area {
+.RC-client-submit-area {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -193,7 +194,7 @@ textarea {
   align-self: stretch;
 }
 
-.project-submit-button {
+.RC-client-submit-button {
   display: flex;
   padding: 20px 36px;
   width: 170px;
